@@ -6,19 +6,19 @@ class SidebarView
     public function AfficherSidebar()
     {
         echo "
-        <div class='bg-gray-600 w-64 min-h-screen p-4'>
+        <div class='bg-gray-600 w-64 h-screen fixed p-4'>
             <div class='flex justify-center mb-6'>
                 <img src='../Images/Logo.png' alt='Logo' class='w-24'>
             </div>
             <ul class='space-y-4'>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='/dashboard' class='flex items-center space-x-3 p-2 rounded'>
+                <a href ='http://localhost/projets/YadElAwn/Controllers/Dashboard.php' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Dashboard.png' alt='Dashboard' class='w-5 h-5'>
                         <span class='text-white text-sm'>Dashboard</span>
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='/partenaires' class='flex items-center space-x-3 p-2 rounded'>
+                    <a href='http://localhost/projets/YadElAwn/Controllers/GestionPartenaires.php' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Personne.png' alt='Partenaires' class='w-5 h-5'>
                         <span class='text-white text-sm'>Gestion des Partenaires</span>
                     </a>
