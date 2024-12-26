@@ -12,27 +12,27 @@ class SidebarView
             </div>
             <ul class='space-y-4'>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                <a href ='http://localhost/projets/YadElAwn/Controllers/Dashboard.php' class='flex items-center space-x-3 p-2 rounded'>
+                <a href ='../Pages/Dashboard.php' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Dashboard.png' alt='Dashboard' class='w-5 h-5'>
                         <span class='text-white text-sm'>Dashboard</span>
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='http://localhost/projets/YadElAwn/Controllers/GestionPartenaires.php' class='flex items-center space-x-3 p-2 rounded'>
+                    <a href='../Pages/Partenaires.php' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Personne.png' alt='Partenaires' class='w-5 h-5'>
                         <span class='text-white text-sm'>Gestion des Partenaires</span>
                     </a>
                 </li>
-                <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='/offres' class='flex items-center space-x-3 p-2 rounded'>
-                        <img src='../Images/Offres.png' alt='Offres' class='w-5 h-5'>
-                        <span class='text-white text-sm'>Gestion des Offres</span>
+                        <li class='flex items-center space-x-3 hover:bg-gray-700'>
+                    <a href='../Pages/Membres.php' class='flex items-center space-x-3 p-2 rounded'>
+                        <img src='../Images/Personne.png' alt='Membres' class='w-5 h-4'>
+                        <span class='text-white text-sm'>Gestion des Membres</span>
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='/membres' class='flex items-center space-x-3 p-2 rounded'>
-                        <img src='../Images/Personne.png' alt='Membres' class='w-5 h-4'>
-                        <span class='text-white text-sm'>Gestion des Membres</span>
+                    <a href='../Pages/offres' class='flex items-center space-x-3 p-2 rounded'>
+                        <img src='../Images/Offres.png' alt='Offres' class='w-5 h-5'>
+                        <span class='text-white text-sm'>Gestion des Offres</span>
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>

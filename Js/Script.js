@@ -1,55 +1,43 @@
+//Tri des partenaires par nom 
 document.addEventListener('DOMContentLoaded', function () {
-    // Sélectionner l'élément de l'image
     const trierNom = document.getElementById('triernom');
-    
     trierNom.addEventListener('click', function() {
-        const table = document.querySelector('table tbody'); // Sélectionner le corps du tableau
-        const rows = Array.from(table.rows); // Convertir les lignes en tableau
-
-        // Trier les lignes par ordre alphabétique en fonction du texte de la première cellule
+        const table = document.querySelector('table tbody'); 
+        const rows = Array.from(table.rows); 
         rows.sort(function(a, b) {
-            const keyA = a.cells[1].textContent.trim(); // Contenu texte de la première cellule
-            const keyB = b.cells[1].textContent.trim(); // Contenu texte de la première cellule
-            return keyA.localeCompare(keyB); // Comparaison alphabétique
+            const keyA = a.cells[1].textContent.trim(); 
+            const keyB = b.cells[1].textContent.trim(); 
+            return keyA.localeCompare(keyB); 
         });
-
-        // Ajouter les lignes triées au tableau
         rows.forEach(function(row) {
-            table.appendChild(row); // Ajoute chaque ligne triée dans le corps du tableau
+            table.appendChild(row); 
         });
     });
 });
+//Tri des partenaires par ville
 document.addEventListener('DOMContentLoaded', function () {
- 
-    // Sélectionner l'élément de l'image pour trier par ville
-    const trierVille = document.getElementById('trierville');
+     const trierVille = document.getElementById('trierville');
     trierVille.addEventListener('click', function() {
-        trierTable(4); // Trie par la cinquième colonne (Ville, index 4)
+        trierTable(4); 
     });
-
-    // Fonction générique de tri
     function trierTable(colonneIndex) {
-        const table = document.querySelector('table tbody'); // Sélectionner le corps du tableau
-        const rows = Array.from(table.rows); // Convertir les lignes en tableau
-
-        // Trier les lignes par ordre alphabétique en fonction du texte de la cellule spécifiée
+        const table = document.querySelector('table tbody');
+        const rows = Array.from(table.rows);
         rows.sort(function(a, b) {
-            const keyA = a.cells[3].textContent.trim(); // Contenu texte de la cellule à l'index spécifié
-            const keyB = b.cells[3].textContent.trim(); // Contenu texte de la cellule à l'index spécifié
-            return keyA.localeCompare(keyB); // Comparaison alphabétique
+            const keyA = a.cells[3].textContent.trim(); 
+            const keyB = b.cells[3].textContent.trim(); 
+            return keyA.localeCompare(keyB); 
         });
-
-        // Ajouter les lignes triées au tableau
         rows.forEach(function(row) {
-            table.appendChild(row); // Ajoute chaque ligne triée dans le corps du tableau
+            table.appendChild(row);
         });
     }
 });
+/*
 document.addEventListener('DOMContentLoaded', function() {
-    // Écouteur d'événement pour filtrer les lignes par ville
     document.getElementById('villeFilter').addEventListener('change', function() {
-        var selectedVille = this.value; // Ville sélectionnée
-        filterRowsByVille(selectedVille); // Appel de la fonction de filtrage
+        var selectedVille = this.value;
+        filterRowsByVille(selectedVille); 
     });
 });
 
@@ -66,7 +54,21 @@ function filterRowsByVille(selectedVille) {
             row.style.display = 'none'; // Cache la ligne
         }
     });
-}
+}*/
 
-
-
+// tri pour les membres
+document.addEventListener('DOMContentLoaded', function () {
+    const trierNom = document.getElementById('triermembre');
+    trierNom.addEventListener('click', function() {
+        const table = document.querySelector('table tbody'); 
+        const rows = Array.from(table.rows); 
+        rows.sort(function(a, b) {
+            const keyA = a.cells[0].textContent.trim(); 
+            const keyB = b.cells[0].textContent.trim(); 
+            return keyA.localeCompare(keyB); 
+        });
+        rows.forEach(function(row) {
+            table.appendChild(row); 
+        });
+    });
+});

@@ -1,8 +1,8 @@
 <?php
-require_once 'AjouterPartenairesController.php';
-require_once 'HeaderController.php';
-require_once 'SidebarController.php';
-require_once '../Configuration/Database.php';
+require_once '../Controllers/AjouterPartenairesController.php';
+require_once '../Controllers/HeaderController.php';
+require_once '../Controllers/SidebarController.php';
+require_once '../Controllers/../Configuration/Database.php';
 class Gestion {
     public function Afficher()
    {   

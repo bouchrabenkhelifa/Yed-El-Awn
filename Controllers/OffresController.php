@@ -1,21 +1,21 @@
 <?php
 
 require_once __DIR__ . '/../Models/PartenairesModel.php';
-require_once __DIR__ . '/../Views/PartenairesView.php';
+require_once __DIR__ . '/../Views/OffresView.php';
 
-class PartenairesController {
+class OffresController {
     private $PartenaireModel;
-    private $PartenairesView;
+    private $OffresView;
 
     public function __construct($db) {
         $this->PartenaireModel = new PartenairesModel($db);
-        $this->PartenairesView = new PartenairesView();
+        $this->OffresView = new OffresView();
     }
 
-    public function afficherPartenaires() {
+    public function afficherOffres() {
         $stmt = $this->PartenaireModel->getAll();
-        $partenaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $this->PartenairesView->afficherListePartenaires($partenaires);
+        $Offres = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $this->OffresView->afficherListePartenaires($Offres);
     }
 
     public function supprimerPartenaire($idpartenaire) {
