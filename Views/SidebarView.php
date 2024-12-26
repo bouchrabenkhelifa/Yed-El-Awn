@@ -30,21 +30,27 @@ class SidebarView
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='../Pages/offres' class='flex items-center space-x-3 p-2 rounded'>
+                    <a href='../Pages/Offres' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Offres.png' alt='Offres' class='w-5 h-5'>
                         <span class='text-white text-sm'>Gestion des Offres</span>
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='/dons' class='flex items-center space-x-3 p-2 rounded'>
+                    <a href='../Pages/Dons' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Dons.png' alt='Dons' class='w-5 h-6'>
                         <span class='text-white text-sm'>Gestion des Dons</span>
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='/benevoles' class='flex items-center space-x-3 p-2 rounded'>
+                    <a href='../Pages/GestionBenevoles.php' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Personne.png' alt='Bénévoles' class='w-5 h-4'>
                         <span class='text-white text-sm'>Gestion des Bénévoles</span>
+                    </a>
+                </li>  
+                <li class='flex items-center space-x-3 hover:bg-gray-700'>
+                    <a href='../Pages/GestionDemandesAides.php' class='flex items-center space-x-3 p-2 rounded'>
+                        <img src='../Images/Dons.png' alt='Bénévoles' class='w-5 h-6'>
+                        <span class='text-white text-sm'>Les demandes d'aide</span>
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
