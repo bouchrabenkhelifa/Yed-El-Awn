@@ -1,8 +1,20 @@
 <?php
+require_once 'MenuController.php';
+require_once 'FooterController.php';
 require_once '../Configuration/Database.php';
-require_once __DIR__ . '/MembresController.php';
-$database = new Database();
-$db = $database->getConnection();
-$MembresController= new MembresController($db);
-$MembresController->afficherMembres();
+class test {
+    public function Afficher()
+   {
+        $database = new Database();
+        $db = $database->getConnection();
+        $MenuController = new MenuController($db);
+        $MenuController->afficherMenu();
+        $FooterController = new FooterController();
+        $FooterController->afficherFooter();
+    }
+}
+
+
+$admin = new test();
+$admin->Afficher();
 ?>

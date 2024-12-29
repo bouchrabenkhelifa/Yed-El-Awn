@@ -6,7 +6,6 @@ class PartenairesView {
 
     public function afficherListePartenaires($partenaires) {
         echo"<head>";
-            header('Content-Type: text/html; charset=UTF-8');
             echo"<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>";
             echo"<title>Partenaires</title>";
             echo"<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
@@ -60,10 +59,10 @@ class PartenairesView {
                             <td class='px-4 py-2'>" . htmlspecialchars($partenaire['email']) . "</td>
                             <td class='px-4 py-2'>" . htmlspecialchars($partenaire['telephone']) . "</td>
                             <td class='px-4 py-2 flex space-x-2'>
-                    <button data-idpartenaire=".$partenaire['idpartenaire'].">
-                      <img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'>
-                    </button>
-                      <img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>
+                              <button idpartenaire='".$partenaire['idpartenaire']."'>
+                                  <img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'>
+                              </button>
+                 <img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>
                    </td>
                  </tr>";
                     }

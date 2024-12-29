@@ -22,20 +22,11 @@ class PartenairesModel {
         return $stmt;
     }
     public function supprimer($idpartenaire) {
-        try {
-            $sql = "DELETE FROM partenaire WHERE idpartenaire = :idpartenaire";
+            $sql = "DELETE FROM partenaire WHERE idpartenaire = ?";
             $stmt = $this->conn->prepare($sql);
-            $stmt->bindParam(':idpartenaire', $idpartenaire, PDO::PARAM_INT);
-            if ($stmt->execute()) {
-                return true; 
-            } else {
-                return false;
-            }
-        } catch (PDOException $e) {
-
-            echo "Erreur lors de la suppression du partenaire : " . $e->getMessage();
-            return false;
-        }
+            $stmt->bindParam(1, $idpartenaire);
+            $stmt->execute();
+        
     }
     public function ajouter($nom, $idcategorie, $telephone, $email, $ville, $logo, $password) {
         $sql = "INSERT INTO partenaires (nom, idcategorie, telephone, email, ville, logo, password) 
