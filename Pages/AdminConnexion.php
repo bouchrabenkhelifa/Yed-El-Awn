@@ -7,6 +7,8 @@ class Gestion {
     public function Afficher() {   
         $database = new Database();
         $db = $database->getConnection();
+        $MenuController = new MenuController($db);
+        $MenuController->afficherAsso();
         $adminController = new AdminLoginController($db);
         $loginView = new AdminLoginView(); 
         $error = null; 

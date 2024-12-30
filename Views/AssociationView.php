@@ -17,7 +17,7 @@ class AssoView {
         echo "<body class='bg-gray-100 font-sans'>";
 
         // Association Section
-        echo "<div class='w-full fixed bg-gray-800 p-2 mb-6'>";
+        echo "<div class='w-full  bg-gray-800 p-2 mb-6'>";
         if (!empty($Association)) {
             echo "<div class='flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto'>";
             foreach ($Association as $asso) {

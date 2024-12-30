@@ -33,10 +33,11 @@ class DiaporamaView {
                     });
                 </script>";
         echo "</head>";
-        echo "<body class='bg-gray-100 mt-10 font-sans'>";
+        echo "<body class='bg-gray-100'>";
 
-        // Diaporama Container
-        echo "<div class='w-full max-w-7xl mx-auto  relative overflow-hidden bg-white shadow-lg'>";
+        
+        echo "<div class='w-full max-w-7xl mx-auto relative overflow-hidden bg-white shadow-lg '>"; 
+
         foreach ($Diapos as $index => $Diapo) {
             echo "<div class='slide' style='display: none;'>";
             echo "    <img src='" . htmlspecialchars($Diapo['photo']) . "' alt='Slide Image' class='w-full h-80 object-cover'>";
@@ -45,6 +46,7 @@ class DiaporamaView {
             echo "    </div>";
             echo "</div>";
         }
+
         echo "</div>";
 
         echo "</body>";

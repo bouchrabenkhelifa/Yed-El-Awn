@@ -17,7 +17,7 @@ class MenuView {
         echo "<body class='bg-gray-100 font-sans'>";
          echo "<div class='w-full bg-gray-800  shadow-md p-4'>";
         if (!empty($Menu)) {
-            echo "<div class='flex justify-end items-center space-x-6 max-w-6xl mx-auto'>";
+            echo "<div class='flex justify-end items-center space-x-6 max-w-6xl  mx-auto'>";
             foreach ($Menu as $element) {
                 echo "<a href='#' class='text-white text-sm font-medium hover:text-blue-200 transition duration-200'>";
                 echo htmlspecialchars($element['Section']);
