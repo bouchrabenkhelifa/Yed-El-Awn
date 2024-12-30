@@ -12,10 +12,9 @@ class FooterView {
         echo "    <meta name='viewport' content='width=device-width, initial-scale=1.0'>";
         echo "    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>";
         echo "    <link href='../output.css' rel='stylesheet' type='text/css'/>";
-        echo "    <script src='../Js/Script.js'></script>";
         echo "</head>";
         echo "<body>";
-        echo "<footer class='bg-gray-800 text-gray-300 py-8'>";
+        echo "<footer class='bg-gray-800 text-gray-300 mt-20 py-8'>";
         echo "    <div class='container mx-auto px-4'>";
         
         // Section principale

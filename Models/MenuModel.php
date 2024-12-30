@@ -17,7 +17,7 @@ class MenuModel {
         $stmt->execute();
         return $stmt;
     }
-    public function getAssociation() {
+    public function getAsso() {
         $query = "SELECT * FROM association";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();

@@ -1,14 +1,14 @@
 <?php
-require_once 'MenuController.php';
-require_once 'FooterController.php';
-require_once 'DiaporamaController.php';
+require_once '../Controllers/MenuController.php';
+require_once '../Controllers/FooterController.php';
+require_once '../Controllers/DiaporamaController.php';
 require_once '../Views/LoginView.php';
 require_once '../Views/SignupView.php';
 require_once '../Configuration/Database.php';
 class test {
     public function Afficher()
    {
-        /*$database = new Database();
+        $database = new Database();
         $db = $database->getConnection();
         $MenuController = new MenuController($db);
         $MenuController->afficherAsso();
@@ -16,15 +16,10 @@ class test {
         $DiaporamaController->afficherDiapo();
         $MenuController->afficherMenu();
         $FooterController = new FooterController();
-        $FooterController->afficherFooter();*/
-        $log= new LoginView();
-        $log->afficher();
-        $sign= new SignupView();
-        $sign->afficher();
+        $FooterController->afficherFooter();
+   
     }
 }
-
-
 $admin = new test();
 $admin->Afficher();
 ?>

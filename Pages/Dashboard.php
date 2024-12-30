@@ -5,7 +5,11 @@ require_once '../Controllers/SidebarController.php';
 require_once '../Configuration/Database.php';
 class test {
     public function Afficher()
-   {
+   { session_start();
+    if (!isset($_SESSION['admin'])) {
+        header("Location: AdminConnexion.php");  
+        exit();
+    }
         $database = new Database();
         $db = $database->getConnection();
         $HeaderController = new HeaderController($db);
