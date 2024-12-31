@@ -21,7 +21,7 @@ class SignupView {
                 
                 <div class='mb-4'>
                     <label for='username' class='block text-lg font-medium text-gray-700'>Nom d'utilisateur</label>
-                    <input type='text' id='username' name='username' class='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500' placeholder='Choisissez votre nom d'utilisateur'>
+                    <input type='text' id='username' name='username' class='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500' placeholder='Choisissez votre nom d utilisateur'>
                 </div>
 
                 <div class='mb-4'>
