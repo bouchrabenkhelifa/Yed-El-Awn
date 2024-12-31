@@ -12,6 +12,7 @@ class CatalogueController {
         $this->CatalogueView = new CatalogueView();
     }
 
+
     public function afficherCatalogue() {
         $stmt = $this->CatalogueModel->getAll();
         $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -2,14 +2,16 @@
 
 require_once __DIR__ . '/../Models/PartenairesModel.php';
 require_once __DIR__ . '/../Views/PartenairesView.php';
+require_once __DIR__ . '/../Views/LogosSectionView.php';
 
 class PartenairesController {
     private $PartenaireModel;
     private $PartenairesView;
-
+    private $LogosSectionView;
     public function __construct($db) {
         $this->PartenaireModel = new PartenairesModel($db);
         $this->PartenairesView = new PartenairesView();
+        $this->LogosSectionView = new LogosSectionView();
     }
 
     public function afficherPartenaires() {
@@ -17,7 +19,11 @@ class PartenairesController {
         $partenaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $this->PartenairesView->afficherListePartenaires($partenaires);
     }
-
+    public function afficherlogos() {
+    $stmt = $this->PartenaireModel->getAll();
+    $partenaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $this->LogosSectionView->afficher($partenaires);
+    }
     public function supprimerPartenaire($idpartenaire) {
         $this->PartenaireModel->supprimer($idpartenaire);
     }}
