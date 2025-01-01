@@ -15,6 +15,21 @@ class PartenairesModel {
         $this->conn = $db;
     }
 
+    public function getPartenaire($email) {
+        try {
+            $query = "SELECT * FROM partenaire WHERE email=:email";
+            $stmt = $this->conn->prepare($query); 
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR); 
+            $stmt->execute();
+            $partenaire = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $partenaire;
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
+            return null;
+        }
+    }
+    
+    
     public function getAll() {
         $query = "SELECT * FROM partenaire";
         $stmt = $this->conn->prepare($query);
@@ -31,8 +46,8 @@ class PartenairesModel {
     public function ajouter($nom, $idcategorie, $telephone, $email, $ville, $logo, $password) {
         $sql = "INSERT INTO partenaires (nom, idcategorie, telephone, email, ville, logo, password) 
                 VALUES (:nom, :idcategorie, :telephone, :email, :ville, :logo, :password)";
-$stmt = $this->conn->prepare($sql);
-$stmt->execute([
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([
             ':nom' => $nom,
             ':idcategorie' => $idcategorie,
             ':telephone' => $telephone,

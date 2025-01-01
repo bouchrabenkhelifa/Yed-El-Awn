@@ -22,10 +22,7 @@ class AdminLoginController {
             return "Mot de passe incorrect.";
         }
         
-        session_start();
-        $_SESSION['admin'] = $admin;
-        header("Location: ../Pages/Dashboard.php");
-        exit();
+    
     }
     
     
