@@ -22,6 +22,9 @@ class PartenaireLoginController {
             return "Mot de passe incorrect.";
         }
         session_start();
+        $_SESSION['id'] = $partenaire['idpartenaire'];
+        $_SESSION['nompartenaire'] = $partenaire['nom'];
+        $_SESSION['logopartenaire'] = $partenaire['logo'];
         $_SESSION['partenaire'] = $partenaire;
         header("Location: ../Pages/DashboardPartenaire.php");
         exit();  
