@@ -1,6 +1,7 @@
 <?php
 require_once '../Controllers/MenuController.php';
 require_once '../Controllers/FooterController.php';
+require_once '../Controllers/PartenaireLoginController.php';
 require_once '../Views/LoginView.php';
 require_once '../Configuration/Database.php';
 class Gestion {
@@ -10,8 +11,15 @@ class Gestion {
         $db = $database->getConnection();
         $MenuController = new MenuController($db);
         $MenuController->afficherAsso();
+        $PartenaireLoginController = new PartenaireLoginController($db);
         $log= new LoginView();
-        $log->afficher();
+        $error = null; 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email'], $_POST['password'])) {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $error = $PartenaireLoginController->login($email, $password);
+        }
+        $log->afficher($error);
         $FooterController = new FooterController();
         $FooterController->afficherFooter();
     

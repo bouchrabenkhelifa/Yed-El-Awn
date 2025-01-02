@@ -21,11 +21,11 @@ class PartenaireLoginController {
         if ($password !== $partenaire['password']) {
             return "Mot de passe incorrect.";
         }
-        
         session_start();
         $_SESSION['partenaire'] = $partenaire;
         header("Location: ../Pages/DashboardPartenaire.php");
-        exit();
+        exit();  
+    
     }
     
     

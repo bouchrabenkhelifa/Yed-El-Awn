@@ -16,7 +16,7 @@ class LogosSectionView {
         echo "</head>";
         echo "<body class='bg-gray-100 p-8'>";
 
-        echo "<h1 class='text-blue-900 text-center font-bold mb-6'>Nos partenaires</h1>";
+        echo "<a href='../Pages/Catalogue.php'><h1 class='text-blue-900 text-center font-bold mb-6'>Nos partenaires</h1></a>";
 
         // Container for horizontal scrolling
         echo "<div class='flex overflow-x-auto space-x-8 py-4 justify-center'>"; 
