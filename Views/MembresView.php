@@ -55,8 +55,9 @@ class MembresView {
                     <button data-id=".$Membre['id'].">
                       <img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'>
                     </button>
-                      <img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>
-                   </td>
+                     <a href='../Pages/ModifierMembre.php?id=" . htmlspecialchars($Membre['id']) . "'>
+                                  <img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>
+                     </a>                     </td>
                  </tr>";
                     }
                 echo "</tbody>

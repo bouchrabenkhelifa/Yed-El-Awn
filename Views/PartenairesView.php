@@ -60,14 +60,16 @@ class PartenairesView {
                             <td class='px-4 py-2'>" . htmlspecialchars($partenaire['email']) . "</td>
                             <td class='px-4 py-2'>" . htmlspecialchars($partenaire['telephone']) . "</td>
                             <td class='px-4 py-2 flex space-x-2'>
-                              <button idpartenaire='".$partenaire['idpartenaire']."'>
+                                <button idpartenaire='".$partenaire['idpartenaire']."'>
                                   <img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'>
-                              </button>
-                 <img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>
-                   </td>
-                 </tr>";
-                    }
-                echo "</tbody>
+                                 </button>
+                                <a href='../Pages/ModifierPartenaire.php?id=" . htmlspecialchars($partenaire['idpartenaire']) . "'>
+                                  <img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>
+                                 </a>                  
+                            </td>
+                         </tr>";
+                         }
+                        echo "</tbody>
                 </table>
             </div>
         </div>

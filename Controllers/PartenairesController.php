@@ -2,16 +2,20 @@
 
 require_once __DIR__ . '/../Models/PartenairesModel.php';
 require_once __DIR__ . '/../Views/PartenairesView.php';
+require_once __DIR__ . '/../Views/ModifierPartenaireView.php';
 require_once __DIR__ . '/../Views/LogosSectionView.php';
+
 
 class PartenairesController {
     private $PartenaireModel;
     private $PartenairesView;
     private $LogosSectionView;
+    private $ModifierPartenaireView;
     public function __construct($db) {
         $this->PartenaireModel = new PartenairesModel($db);
         $this->PartenairesView = new PartenairesView();
         $this->LogosSectionView = new LogosSectionView();
+        $this->ModifierPartenaireView = new ModifierPartenaireView();
     }
 
     public function afficherPartenaires() {
@@ -26,7 +30,18 @@ class PartenairesController {
     }
     public function supprimerPartenaire($idpartenaire) {
         $this->PartenaireModel->supprimer($idpartenaire);
-    }}
+    }
+    public function Afficher() {
+      if (isset($_GET['id'])) {
+          $idPartenaire = $_GET['id'];
+          $partenaire = $this->PartenaireModel->getPartenaireById($idPartenaire);
+          $this->ModifierPartenaireView->Modifier($partenaire);
+      } else {
+          echo "ID du partenaire manquant.";
+      }
+   }
+   
+}
 
   //  public function ajouterPartenaire($nom, $idcategorie, $telephone, $email, $ville, $logo, $password) {
    //     try {

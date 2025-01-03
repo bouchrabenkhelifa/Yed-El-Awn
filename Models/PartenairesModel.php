@@ -28,7 +28,13 @@ class PartenairesModel {
             return null;
         }
     }
-    
+    public function getPartenaireById($id) {
+        $sql = "SELECT * FROM partenaire WHERE idpartenaire = :id";
+        $stmt = $this->conn->prepare($sql); 
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
     
     public function getAll() {
         $query = "SELECT * FROM partenaire";
