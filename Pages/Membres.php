@@ -16,6 +16,7 @@ class Membres {
         $HeaderController = new HeaderController($db);
         $HeaderController->EnvoyerHeader();
         $MembresController = new MembresController($db);
+        $MembresController->handleRequest();
         $MembresController->afficherMembres();
         $SidebarController = new SidebarController();
         $SidebarController->Afficher();

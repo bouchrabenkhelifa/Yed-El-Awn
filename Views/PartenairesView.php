@@ -1,10 +1,12 @@
 <?php
 require_once  '../Controllers/PartenairesController.php';
+require_once '../Configuration/Database.php';
 
 
 class PartenairesView {
 
     public function afficherListePartenaires($partenaires) {
+      
         echo"<head>";
             echo"<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>";
             echo"<title>Partenaires</title>";
@@ -60,10 +62,10 @@ class PartenairesView {
                             <td class='px-4 py-2'>" . htmlspecialchars($partenaire['email']) . "</td>
                             <td class='px-4 py-2'>" . htmlspecialchars($partenaire['telephone']) . "</td>
                             <td class='px-4 py-2 flex space-x-2'>
-                                <button idpartenaire='".$partenaire['idpartenaire']."'>
-                                  <img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'>
-                                 </button>
-                                <a href='../Pages/ModifierPartenaire.php?id=" . htmlspecialchars($partenaire['idpartenaire']) . "'>
+    <a href='../Pages/Partenaires.php?action=supprimerPartenaire&id=" . htmlspecialchars($partenaire['idpartenaire']) . "'>
+    <img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'>
+</a>
+                               <a href='../Pages/ModifierPartenaire.php?id=" . htmlspecialchars($partenaire['idpartenaire']) . "'>
                                   <img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>
                                  </a>                  
                             </td>

@@ -15,6 +15,7 @@ class test {
         $HeaderController = new HeaderController($db);
         $HeaderController->EnvoyerHeader();
         $partenairesController = new PartenairesController($db);
+        $partenairesController->handleRequest(); // This will now handle the delete action
         $partenairesController->afficherPartenaires();
         $SidebarController = new SidebarController();
         $SidebarController->Afficher();

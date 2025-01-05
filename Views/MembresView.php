@@ -52,12 +52,13 @@ class MembresView {
                             <td class='px-4 py-2'>" . htmlspecialchars($Membre['email']) . "</td>
                             <td class='px-4 py-2'>" . htmlspecialchars($Membre['telephone']) . "</td>
                             <td class='px-4 py-2 flex space-x-2'>
-                    <button data-id=".$Membre['id'].">
-                      <img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'>
-                    </button>
-                     <a href='../Pages/ModifierMembre.php?id=" . htmlspecialchars($Membre['id']) . "'>
+                            <a href='../Pages/Membres.php?action=supprimerMembre&id=" . htmlspecialchars($Membre['id']) . "'>
+                              <img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'>
+                            </a>
+                            <a href='../Pages/ModifierMembre.php?id=" . htmlspecialchars($Membre['id']) . "'>
                                   <img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>
-                     </a>                     </td>
+                            </a>                    
+                            </td>
                  </tr>";
                     }
                 echo "</tbody>

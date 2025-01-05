@@ -20,6 +20,13 @@ class MembresModel {
         $stmt->execute();
         return $stmt;
     }
+    public function supprimer($id) {
+        $sql = "DELETE FROM membre WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
     public function getMembreById($id) {
         $sql = "SELECT * FROM membre WHERE id = :id";
         $stmt = $this->conn->prepare($sql); 

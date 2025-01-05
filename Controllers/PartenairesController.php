@@ -17,7 +17,18 @@ class PartenairesController {
         $this->LogosSectionView = new LogosSectionView();
         $this->ModifierPartenaireView = new ModifierPartenaireView();
     }
-
+    public function handleRequest() {
+      if (isset($_GET['action'])) {
+          switch ($_GET['action']) {
+              case 'supprimerPartenaire':
+                  if (isset($_GET['id'])) {
+                      $idpartenaire = $_GET['id'];
+                      $this->supprimerPartenaire($idpartenaire);
+                  }
+                  break;
+          }
+      }
+  }
     public function afficherPartenaires() {
         $stmt = $this->PartenaireModel->getAll();
         $partenaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -29,8 +40,12 @@ class PartenairesController {
     $this->LogosSectionView->afficher($partenaires);
     }
     public function supprimerPartenaire($idpartenaire) {
-        $this->PartenaireModel->supprimer($idpartenaire);
-    }
+      if ($this->PartenaireModel->supprimer($idpartenaire)) {
+          header('Location: ../Pages/Partenaires.php'); 
+          exit();
+      }
+  }
+  
     public function Afficher() {
       if (isset($_GET['id'])) {
           $idPartenaire = $_GET['id'];

@@ -29,6 +29,24 @@ class MembresController {
             echo "ID du membre manquant.";
         }
      }
+     public function handleRequest() {
+        if (isset($_GET['action'])) {
+            switch ($_GET['action']) {
+                case 'supprimerMembre':
+                    if (isset($_GET['id'])) {
+                        $idmembre = $_GET['id'];
+                        $this->supprimerMembre($idmembre);
+                    }
+                    break;
+            }
+        }
+    }
+    public function supprimerMembre($id) {
+        if ($this->MembresModel->supprimer($id)) {
+            header('Location: ../Pages/Membres.php'); 
+            exit();
+        }
+    }
 public function modifierMembre() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'modifierMembre') {
         if (isset($_POST['id']) && isset($_POST['nom']) && isset($_POST['telephone']) && isset($_POST['email']) && isset($_POST['adresse'])) {
