@@ -16,9 +16,9 @@ class ModiferMembreView {
                 <div class='bg-white shadow-lg rounded-lg p-6 w-full max-w-3xl ml-auto mr-40'>
                     <h4 class='text-2xl text-blue-500 font-semibold mb-4 text-gray-800 text-center'>Modifier un membre</h4>
                     <div class='h-1 bg-blue-500 rounded mb-6'></div>
-<form action='../Controllers/MembresController.php' method='POST' enctype='multipart/form-data' class='grid grid-cols-2 gap-6'>
-                           <input type='hidden' name='action' value='modifierMembre'>
- <input type='hidden' name='id' value='{$membre['id']}'>
+<form action='../Pages/ModifierMembre.php?action=modifierMembre' method='POST' enctype='multipart/form-data' class='grid grid-cols-2 gap-6'>
+                          <input type='hidden' name='action' value='modifierMembre'>
+                          <input type='hidden' name='id' value='{$membre['id']}'>
 
                         <div class='col-span-2'>
                             <label for='nom' class='block text-gray-700 font-medium mb-2'>Nom complet</label>

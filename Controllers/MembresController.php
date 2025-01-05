@@ -47,26 +47,21 @@ class MembresController {
             exit();
         }
     }
-public function modifierMembre() {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'modifierMembre') {
-        if (isset($_POST['id']) && isset($_POST['nom']) && isset($_POST['telephone']) && isset($_POST['email']) && isset($_POST['adresse'])) {
+    public function modifierMembre() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'modifierMembre') {
+            echo "Méthode modifierMembre atteinte !"; // Debug
+
+            if (isset($_POST['id']) && isset($_POST['nom']) && isset($_POST['telephone']) && isset($_POST['email']) && isset($_POST['adresse'])) {
                 $id = $_POST['id'];
                 $nom = $_POST['nom'];
                 $telephone = $_POST['telephone'];
                 $email = $_POST['email'];
                 $adresse = $_POST['adresse'];
-                    $result = $this->MembresModel->updateMembre($id, $nom, $telephone, $email, $adresse);
-                    if ($result) {
-                        header('Location: ../Pages/Membres.php');
-                        exit;
-                    } else {
-                        echo "Erreur lors de la modification du membre.";
-                    }
-                }
+                $result = $this->MembresModel->updateMembre($id, $nom, $telephone, $email, $adresse);
+                
             }
-    
+        }
     }
     
-
 }
 ?>

@@ -20,12 +20,13 @@ class Gestion {
         $SidebarController->Afficher();
         $MembresController = new MembresController($db);
         $MembresController->Afficher();
-    
-    
-    }
+        if (isset($_POST['action']) && $_POST['action'] === 'modifierMembre') {
+            $MembresController->modifierMembre();
+        }
+      
 }
 
-
+}
 $admin = new Gestion();
 $admin->Afficher();
 ?>

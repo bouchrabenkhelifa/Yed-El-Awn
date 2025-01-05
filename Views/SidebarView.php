@@ -5,8 +5,7 @@ class SidebarView
 {
     public function AfficherSidebar()
     {
-        echo "
-        <div class='bg-gray-600 w-64 h-screen fixed p-4'>
+        echo " <div class='bg-gray-600 w-64 h-screen fixed p-4'>
             <div class='flex justify-center mb-6'>
                 <img src='../Images/Logo.png' alt='Logo' class='w-24'>
             </div>
