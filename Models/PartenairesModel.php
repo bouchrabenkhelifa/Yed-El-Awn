@@ -50,7 +50,7 @@ class PartenairesModel {
         
     }
     public function ajouter($nom, $idcategorie, $telephone, $email, $ville, $logo, $password) {
-        $sql = "INSERT INTO partenaires (nom, idcategorie, telephone, email, ville, logo, password) 
+        $sql = "INSERT INTO partenaire (nom, idcategorie, telephone, email, ville, logo, password) 
                 VALUES (:nom, :idcategorie, :telephone, :email, :ville, :logo, :password)";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([
@@ -65,5 +65,15 @@ class PartenairesModel {
         return $this->conn->lastInsertId();
     }
     
+    public function updatePartenaire($idpartenaire, $nom, $telephone, $email, $ville) {
+        $sql = "UPDATE partenaire SET nom = :nom, telephone = :telephone, email = :email, ville = :ville WHERE idpartenaire = :idpartenaire";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':idpartenaire', $idpartenaire);
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':telephone', $telephone);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':ville', $ville);
+        return $stmt->execute();
+    }
 }
 ?>

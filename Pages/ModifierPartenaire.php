@@ -19,6 +19,10 @@ class Gestion {
         $SidebarController->Afficher();
         $PartenairesController = new PartenairesController($db);
         $PartenairesController->Afficher();
+        if (isset($_POST['action']) && $_POST['action'] === 'modifierPartenaire') {
+            $PartenairesController->modifierPartenaire();
+        }
+      
     
     
     }

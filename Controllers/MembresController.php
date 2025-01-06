@@ -47,6 +47,21 @@ class MembresController {
             exit();
         }
     }
+    public function ajouterMembre($nom, $telephone, $email, $adresse, $motdepasse) {
+        try {
+            if (empty($nom) || empty($telephone) || empty($email) || empty($adresse) || empty($motdepasse)) {
+                throw new Exception("Tous les champs requis doivent être remplis.");
+            }
+
+ 
+            $this->MembresModel->ajouter($nom, $telephone, $email, $adresse,$motdepasse);
+            echo "Membre ajouté avec succès.";
+        } catch (Exception $e) {
+            echo "Erreur : " . $e->getMessage();
+        }
+    }
+
+    
     public function modifierMembre() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'modifierMembre') {
             echo "Méthode modifierMembre atteinte !"; // Debug

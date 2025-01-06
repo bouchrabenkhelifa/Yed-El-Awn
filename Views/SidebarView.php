@@ -1,10 +1,15 @@
 <?php
-    echo '<link rel="stylesheet" href="../output.css">';
-    echo '<link rel="stylesheet" href="../All.css">';
 class SidebarView
 {
     public function AfficherSidebar()
-    {
+    { echo"<head>";
+        echo"<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>";
+        echo"<title>Partenaires</title>";
+        echo"<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
+        echo "<link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>"  ;       
+        echo "<link href='../output.css' rel='stylesheet' type='text/css'/>";
+        echo "  <script src='../Js/Script.js'></script>";
+    echo "</head>";
         echo " <div class='bg-gray-600 w-64 h-screen fixed p-4'>
             <div class='flex justify-center mb-6'>
                 <img src='../Images/Logo.png' alt='Logo' class='w-24'>
