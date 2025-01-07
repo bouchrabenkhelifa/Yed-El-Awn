@@ -1,11 +1,11 @@
 <?php
+require_once '../Controllers/DonController.php';
 require_once '../Controllers/HeaderController.php';
-require_once '../Controllers/PartenairesController.php';
 require_once '../Controllers/SidebarController.php';
 require_once '../Configuration/Database.php';
-class test {
+class Gestion {
     public function Afficher()
-   {session_start();
+   {   session_start();
     if (!isset($_SESSION['admin'])) {
         header("Location: AdminConnexion.php");  
         exit();
@@ -14,17 +14,19 @@ class test {
         $db = $database->getConnection();
         $HeaderController = new HeaderController($db);
         $HeaderController->EnvoyerHeader();
-        $partenairesController = new PartenairesController($db);
-        $partenairesController->handleRequest(); 
-        $partenairesController->afficherPartenaires();
         $SidebarController = new SidebarController();
         $SidebarController->Afficher();
+        $DonController = new DonController($db);
+        if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $DonController->getDonDetails($id);
+        }
     
-
+    
     }
 }
 
 
-$admin = new test();
+$admin = new Gestion();
 $admin->Afficher();
 ?>

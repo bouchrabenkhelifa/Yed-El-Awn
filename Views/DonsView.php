@@ -36,8 +36,7 @@ class DonsView {
                     </thead>
                     <tbody>";
                     foreach ($Dons as $Don) {
-                        // Définir une classe CSS en fonction du statut
-                        $statutClass = '';
+                    $statutClass = '';
                         switch ($Don['statut']) {
                             case 'Accepté':
                                 $statutClass = 'bg-green-500 text-white px-5 py-1 rounded-full';
@@ -57,7 +56,8 @@ class DonsView {
                             <td class='px-4 py-2'>" . htmlspecialchars($Don['methode_payement']) . "</td>
                             <td class='px-4 py-2'>" . htmlspecialchars($Don['type_don']) . "</td>
                             <td class='px-4 py-2'>
-                                <span class='$statutClass'>" . htmlspecialchars($Don['statut']) . "</span>
+                              <a href='../Pages/DonDetails.php?id=" . htmlspecialchars($Don['id_don']) . "'>
+                                 <span class='$statutClass'>" . htmlspecialchars($Don['statut']) . "</span>
                             </td>
                         </tr>";
                     }

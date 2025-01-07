@@ -21,10 +21,7 @@ class Gestion {
         $PartenairesController->Afficher();
         if (isset($_POST['action']) && $_POST['action'] === 'modifierPartenaire') {
             $PartenairesController->modifierPartenaire();
-        }
-      
-    
-    
+               }  
     }
 }
 
