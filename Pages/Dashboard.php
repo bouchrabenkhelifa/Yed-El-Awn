@@ -2,6 +2,7 @@
 require_once '../Controllers/PartenairesController.php';
 require_once '../Controllers/HeaderController.php';
 require_once '../Controllers/SidebarController.php';
+require_once '../Controllers/StatistiquesController.php';
 require_once '../Configuration/Database.php';
 class test {
     public function Afficher()
@@ -16,7 +17,8 @@ class test {
         $HeaderController->EnvoyerHeader();
         $SidebarController = new SidebarController();
         $SidebarController->Afficher();
-    
+        $StatistiquesController = new StatistiquesController($db);
+        $StatistiquesController->AfficherDashboard();
 
     }
 }

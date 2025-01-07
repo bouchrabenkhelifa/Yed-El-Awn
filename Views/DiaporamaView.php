@@ -36,13 +36,13 @@ class DiaporamaView {
         echo "<body class='bg-gray-100'>";
 
         
-        echo "<div class='w-full max-w-7xl mx-auto relative overflow-hidden bg-white shadow-lg '>"; 
+        echo "<div class='w-full max-w-7xl mx-auto mb-10 relative overflow-hidden bg-white shadow-lg '>"; 
 
         foreach ($Diapos as $index => $Diapo) {
             echo "<div class='slide' style='display: none;'>";
             echo "    <img src='" . htmlspecialchars($Diapo['photo']) . "' alt='Slide Image' class='w-full h-80 object-cover'>";
             echo "    <div class='p-4 text-center'>";
-            echo "        <h2 class='text-lg font-semibold text-gray-800'>" . htmlspecialchars($Diapo['title']) . "</h2>";
+            echo "        <h2 class='text-lg font-semibold' style='color : #F17228'>" . htmlspecialchars($Diapo['title']) . "</h2>";
             echo "    </div>";
             echo "</div>";
         }

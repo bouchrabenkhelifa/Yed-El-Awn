@@ -11,6 +11,8 @@ class Gestion {
         $db = $database->getConnection();
         $MenuController = new MenuController($db);
         $MenuController->afficherAsso();
+        $MenuController->afficherMenu();
+
         $PartenaireLoginController = new PartenaireLoginController($db);
         $log= new LoginView();
         $error = null; 

@@ -17,19 +17,19 @@ class AssoView {
         echo "<body class='bg-gray-100 font-sans'>";
 
         // Association Section
-        echo "<div class='w-full  bg-gray-800 p-2 mb-6'>";
+        echo "<div class='w-full  p-2 mb-6'>";
         if (!empty($Association)) {
             echo "<div class='flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto'>";
             foreach ($Association as $asso) {
                 echo "<div class='flex items-center space-x-6'>";
                 echo "    <img src='" . htmlspecialchars($asso['logo']) . "' alt='Logo' class='w-16 h-13  rounded-full'>";
-                echo "    <div class='text-white text-xl font-semibold'>" . htmlspecialchars($asso['nom']) . "</div>";
+                echo "    <div style='color:#FFB30E' class=' text-2xl font-semibold'>" . htmlspecialchars($asso['nom']) . "</div>";
                 echo "</div>";
-                echo "<div class='flex space-x-12 mt-4 md:mt-0'>";
-                echo "    <a href='#'><img src='../Images/facebook.png' alt='Facebook' class='w-3 h-5 cursor-pointer'></a>";
-                echo "    <a href='#'><img src='../Images/Twitter.png' alt='Twitter' class='w-5 h-5 cursor-pointer'></a>";
-                echo "    <a href='#'><img src='../Images/Instagram.png' alt='Instagram' class='w-5 h-5 cursor-pointer'></a>";
-                echo "    <a href='#'><img src='../Images/Linkdin.png' alt='LinkedIn' class='w-5 h-5 cursor-pointer'></a>";
+                echo "<div class='flex space-x-12 items-center mt-4 md:mt-0'>";
+                echo "    <a href='https://www.facebook.com/bou.ch.3990?mibextid=ZbWKwL'><img src='../Images/facebook1.png' alt='Facebook' class='w-8 h-8 cursor-pointer'></a>";
+                echo "    <a href='#'><img src='../Images/Twitter1.png' alt='Twitter' class='w-7 h-6 cursor-pointer'></a>";
+                echo "    <a href='https://www.instagram.com/bouchra_benkhelifa/?next=%2F'><img src='../Images/Instagram1.png' alt='Instagram' class='w-8 h-8 cursor-pointer'></a>";
+                echo "    <a href='https://www.linkedin.com/in/bouchra-benkhelifa-830461284/'><img src='../Images/Linkedin.png' alt='LinkedIn' class='w-8 h-8 cursor-pointer'></a>";
                 echo "</div>";
             }
             echo "</div>";

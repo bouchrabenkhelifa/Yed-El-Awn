@@ -3,6 +3,7 @@ require_once '../Controllers/MenuController.php';
 require_once '../Controllers/FooterController.php';
 require_once '../Controllers/DiaporamaController.php';
 require_once '../Controllers/PartenairesController.php';
+require_once '../Controllers/NewsController.php';
 require_once '../Configuration/Database.php';
 class test {
     public function Afficher()
@@ -14,6 +15,8 @@ class test {
         $DiaporamaController = new DiaporamaController($db);
         $DiaporamaController->afficherDiapo();
         $MenuController->afficherMenu();
+        $NewsController = new NewsController($db);
+        $NewsController->afficherNews();
         $PartenairesController = new PartenairesController($db);
         $PartenairesController->afficherlogos();
         $FooterController = new FooterController();
