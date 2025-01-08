@@ -40,7 +40,7 @@ class LoginView {
                 <div class='mt-4 text-center'>
                     <p class='text-sm text-gray-600'>
                         Vous n'avez pas de compte ? 
-                        <a href='signup.php' class='text-blue-600 hover:text-blue-800 font-semibold'>Inscrivez-vous</a>
+                        <a href='../Pages/Inscription' class='text-blue-600 hover:text-blue-800 font-semibold'>Inscrivez-vous</a>
                     </p>
                 </div>
             </div>    </form>";

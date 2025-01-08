@@ -46,7 +46,7 @@ class SignupView {
                 <div class='mt-4 text-center'>
                     <p class='text-sm text-gray-600'>
                         Vous avez déjà un compte ? 
-                        <a href='login.php' class='text-blue-600 hover:text-blue-800 font-semibold'>Se connecter</a>
+                        <a href='../Pages/Connexion.php' class='text-blue-600 hover:text-blue-800 font-semibold'>Se connecter</a>
                     </p>
                 </div>
             </div>";

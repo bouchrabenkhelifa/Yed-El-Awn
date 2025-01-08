@@ -10,7 +10,6 @@ class test {
         $db = $database->getConnection();
         $MenuController = new MenuController($db);
         $MenuController->afficherAsso();
-        $MenuController->afficherMenu();
         $CatalogueController = new CatalogueController($db);
         $CatalogueController->afficherCatalogue();
         $FooterController = new FooterController();

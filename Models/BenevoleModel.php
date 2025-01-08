@@ -16,7 +16,7 @@ class BenevoleModel {
     public function getAll() {
         $query = " SELECT nom,title,disponibilite,date_inscription,telephone,domaine_interet FROM benevole
                    JOIN evenement ON benevole.id_evenement = evenement.id_evenement
-                   JOIN membre ON benevole.id = membre.id ";
+                   JOIN membre ON benevole.id_membre = membre.id ";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt;

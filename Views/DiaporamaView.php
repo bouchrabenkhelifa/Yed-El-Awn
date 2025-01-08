@@ -42,7 +42,7 @@ class DiaporamaView {
             echo "<div class='slide' style='display: none;'>";
             echo "    <img src='" . htmlspecialchars($Diapo['photo']) . "' alt='Slide Image' class='w-full h-80 object-cover'>";
             echo "    <div class='p-4 text-center'>";
-            echo "        <h2 class='text-lg font-semibold' style='color : #F17228'>" . htmlspecialchars($Diapo['title']) . "</h2>";
+            echo "        <h2 class='text-lg font-semibold text-purple-800'>" . htmlspecialchars($Diapo['title']) . "</h2>";
             echo "    </div>";
             echo "</div>";
         }

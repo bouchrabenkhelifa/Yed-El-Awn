@@ -16,8 +16,8 @@ class RemisesView {
                 echo "<body class='bg-gray-50 font-sans'>";
         
                 // Header
-                echo "<div class='bg-yellow-500 text-white text-center p-4'>
-                        <h1 class='text-2xl font-semibold'>Liste des Remises</h1>
+                echo "<div class=' text-white text-center p-4'>
+                        <h1 style='color:#6B46C1' class='text-3xl font-semibold'>Liste des Remises</h1>
                       </div>";
         
                 // Container for the list of remises

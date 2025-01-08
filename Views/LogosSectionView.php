@@ -2,7 +2,6 @@
 require_once '../Controllers/PartenairesController.php';
 
 class LogosSectionView {
-
     public function afficher($partenaires) {
         echo "<!DOCTYPE html>";
         echo "<html lang='en'>";
@@ -13,19 +12,47 @@ class LogosSectionView {
         echo "    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>";
         echo "    <link href='../output.css' rel='stylesheet' type='text/css'/>";
         echo "    <script src='../Js/Script.js'></script>";
+        echo "    <style>
+                    .purple-shadow:hover {
+                        box-shadow: 0 0 25px rgba(107, 70, 193, 0.5);
+                    }
+                </style>";
         echo "</head>";
-        echo "<body class='bg-gray-100 p-8'>";
+        echo "<body class='bg-gray-50 min-h-screen'>";
 
-        echo "<a href='../Pages/Catalogue.php'><h1 style='color : #F17228' class='text-2xl text-center mt-10 font-bold mb-6'>Nos partenaires</h1></a>";
-        echo "<div class='flex overflow-x-auto space-x-8 py-4 justify-center'>"; 
+        echo "<div class='max-w-6xl mx-auto px-4 '>";
+        
+        echo "<div class='text-center mb-12'>";
+        echo "    <a href='../Pages/Catalogue.php' class='inline-block group'>";
+        echo "        <h2 style='color: #6B46C1' class='text-3xl font-bold mb-2 transform transition-transform group-hover:scale-105'>Nos partenaires</h2>";
+        echo "    </a>";
+        echo "</div>";
 
+        echo "<div class='relative'>";
+        echo "    <div class='absolute inset-0 bg-gradient-to-r from-transparent via-purple-50 to-transparent opacity-50'></div>";
+        
+        echo "    <div class='relative flex overflow-x-auto space-x-12 py-8 px-4 justify-center items-center'>";
+        
         foreach ($partenaires as $partenaire) {
-            echo "<div class='flex-shrink-0'>";  
-            echo "    <img src='" . htmlspecialchars($partenaire['logo']) . "' alt='Logo de " . htmlspecialchars($partenaire['nom']) . "' class='w-28 h-28 object-contain bg-white shadow-md rounded-full'>";
+           echo" <section id='partenaires'>";
+            echo "<div class='flex-shrink-0 transform transition-all duration-300 hover:scale-105'>";
+            echo "    <div class='relative group'>";
+            echo "        <img src='" . htmlspecialchars($partenaire['logo']) . "' 
+                          alt='Logo de " . htmlspecialchars($partenaire['nom']) . "' 
+                          class='w-32 h-32 object-contain bg-white rounded-full p-4 
+                                 transition-all duration-300 purple-shadow'>";
+            echo "    </div>";
+            echo "    <p class='text-center mt-3 text-sm font-medium text-purple-800 opacity-0 group-hover:opacity-100 
+                         transition-opacity duration-300'>" . htmlspecialchars($partenaire['nom']) . "</p>";
             echo "</div>";
+            echo" </section>";
+
         }
 
-        echo "</div>";  
+        echo "    </div>";
+        echo "</div>";
+        
+        echo "</div>";
 
         echo "</body>";
         echo "</html>";

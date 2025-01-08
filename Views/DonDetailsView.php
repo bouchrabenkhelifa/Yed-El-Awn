@@ -12,7 +12,7 @@ class DonDetailsView {
         echo "</head>";
         echo "<body class='bg-gray-50'>";
 
-        echo "<div class='max-w-3xl mx-auto py-8 px-4'>";
+        echo "<div class='max-w-3xl mx-80 py-28 px-4'>";
         
 
         echo "<div class='bg-white rounded-xl shadow-lg p-6'>";

@@ -21,7 +21,7 @@ class HeaderView {
             echo "<div class='flex items-center justify-between ml-auto space-x-8'>";
             echo "<input placeholder='Rechercher ici' type='text' class='border-2 border-gray-300  p-2 rounded-2xl bg-white text-[#363740]'/>";  
         
-            echo "<img src='" . htmlspecialchars($adminInfo['photo']) . "' alt='Photo de profil' class=' w-10 h-10 rounded-full border-4 border-white'/>";
+            echo "<img src='" . htmlspecialchars($adminInfo['photo']) . "' alt='Photo de profil' class=' w-10 h-10 rounded-full '/>";
 
             echo "</div>";
             echo "</div>"; 
