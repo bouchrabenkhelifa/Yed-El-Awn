@@ -1,52 +1,66 @@
 <?php
-require_once '../Controllers/PartenaireLoginController.php';
-
 class LoginView {
-
     public function afficher($error = null) {
-        
-        echo "<!DOCTYPE html>";
-        echo "<html lang='en'>";
-        echo "<head>";
-        echo "    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>";
-        echo "    <title>Menu</title>";
-        echo "    <meta name='viewport' content='width=device-width, initial-scale=1.0'>";
-        echo "    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>";
-        echo "    <link href='../output.css' rel='stylesheet' type='text/css'/>";
-        echo "    <script src='../Js/Script.js'></script>";
-        echo "</head>";
-        echo "<body class='bg-gray-100'>";
-        echo "<form action='' method='POST'> ";
-
-        echo " <div class='max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg mt-16'>";
-        if (isset($_GET['error'])) {
-            echo "<p class='text-red-600 text-center mb-4'>{$_GET['error']}</p>";
-        }
-        
-               echo" <div class='mb-4'>
-                    <label for='email' class='block text-lg font-medium text-gray-700'>Email</label>
-                    <input type='email' id='email' name='email' class='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500' placeholder='Entrez votre email'>
-                </div>
-
-                <div class='mb-4'>
-                    <label for='password' class='block text-lg font-medium text-gray-700'>Mot de passe</label>
-                    <input type='password' id='password' name='password' class='mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500' placeholder='Entrez votre mot de passe'>
-                </div>
+        ?>
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Connexion</title>
+            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        </head>
+        <body class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 min-h-screen">
+            <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-xl">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Connexion</h2>
                 
-                <button type='submit' class='w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'>
-                    Se connecter
-                </button>
-                
-                <div class='mt-4 text-center'>
-                    <p class='text-sm text-gray-600'>
-                        Vous n'avez pas de compte ? 
-                        <a href='../Pages/Inscription' class='text-blue-600 hover:text-blue-800 font-semibold'>Inscrivez-vous</a>
-                    </p>
-                </div>
-            </div>    </form>";
+                <?php if ($error): ?>
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                        <span class="block sm:inline"><?php echo htmlspecialchars($error); ?></span>
+                    </div>
+                <?php endif; ?>
 
-        echo "</body>";
-        echo "</html>";
+                <form method="POST" class="space-y-6">
+                    <!-- Sélection du type d'utilisateur -->
+                    <div class="flex justify-center space-x-4 mb-6">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="user_type" value="user" checked
+                                   class="form-radio text-indigo-600">
+                            <span class="ml-2">Utilisateur</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="user_type" value="partenaire"
+                                   class="form-radio text-indigo-600">
+                            <span class="ml-2">Partenaire</span>
+                        </label>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <!-- Mot de passe -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
+                        <input type="password" id="password" name="password" required
+                               class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <!-- Bouton de connexion -->
+                    <div>
+                        <button type="submit"
+                                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Se connecter
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </body>
+        </html>
+        <?php
     }
 }
 ?>
