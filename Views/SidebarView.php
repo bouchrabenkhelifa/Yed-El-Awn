@@ -20,7 +20,12 @@ class SidebarView
                         <img src='../Images/Dashboard.png' alt='Dashboard' class='w-5 h-5'>
                         <span class='text-white text-sm'>Dashboard</span>
                     </a>
-                </li>
+                <li class='flex items-center space-x-3 hover:bg-gray-700'>
+                    <a href='../Pages/Users.php' class='flex items-center space-x-3 p-2 rounded'>
+                        <img src='../Images/Personne.png' alt='Partenaires' class='w-5 h-5'>
+                        <span class='text-white text-sm'>Gestion des utilisateurs</span>
+                    </a>
+                </li>    </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
                     <a href='../Pages/Partenaires.php' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Personne.png' alt='Partenaires' class='w-5 h-5'>
