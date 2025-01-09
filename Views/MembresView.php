@@ -39,7 +39,6 @@ class MembresView {
                                 <img id='triermembre' src='../Images/Tri.png' alt='tri' class='w-3 h-4 ml-2 mt-1 cursor-pointer'>
                             </td>
                             <td class='px-4 py-2 text-left text-gray-500'>Adresse</td>
-                            <td class='px-4 py-2 text-left text-gray-500'>Email</td>
                             <td class='px-4 py-2 text-left text-gray-500'>Télépdone</td>
                             <td class='px-4 py-2 text-left text-gray-500'>Gestion</td>
                         </tr>
@@ -49,7 +48,6 @@ class MembresView {
                         echo "<tr class='bg-white'>
                             <td class='px-4 py-2'>" . htmlspecialchars($Membre['nom']) . " </td>
                             <td class='px-4 py-2'>" . htmlspecialchars($Membre['adresse']) . "</td>
-                            <td class='px-4 py-2'>" . htmlspecialchars($Membre['email']) . "</td>
                             <td class='px-4 py-2'>" . htmlspecialchars($Membre['telephone']) . "</td>
                             <td class='px-4 py-2 flex space-x-2'>
                        <a href='../Pages/Membres.php?action=supprimerMembre&id=" . htmlspecialchars($Membre['id']) . "'>

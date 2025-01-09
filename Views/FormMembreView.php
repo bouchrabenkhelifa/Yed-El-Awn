@@ -23,17 +23,8 @@ class FormMembreView {
                         <label for='nom' class='block text-sm font-medium text-black'>Nom</label>
                         <input type='text' id='nom' name='nom' required class='w-full px-3 py-2 mt-1 bg-white text-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-300'>
                     </div>
-                    <div>
-                        <label for='motdepasse' class='block text-sm font-medium text-black'>Mot de passe</label>
-                        <input type='password' id='motdepasse' name='motdepasse' required class='w-full px-3 py-2 mt-1 bg-white text-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-300'>
-                    </div>
-                </div>
 
-                <div class='grid grid-cols-1 md:grid-cols-2 gap-4 mb-6'>
-                    <div>
-                        <label for='email' class='block text-sm font-medium text-black'>Email</label>
-                        <input type='email' id='email' name='email' required class='w-full px-3 py-2 mt-1 bg-white text-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-300'>
-                    </div>
+    
                     <div>
                         <label for='telephone' class='block text-sm font-medium text-black'>Téléphone</label>
                         <input type='tel' id='telephone' name='telephone' required class='w-full px-3 py-2 mt-1 bg-white text-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-300'>

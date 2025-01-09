@@ -17,14 +17,12 @@ class Gestion {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nom = $_POST['nom'];
             $telephone = $_POST['telephone'];
-            $email = $_POST['email'];
             $adresse = $_POST['adresse'];
-            $motdepasse = $_POST['motdepasse'];
             $carteidentite = $_FILES['carteidentite']['name'];
             $photo = $_FILES['photo']['name'];
             $recu = $_FILES['recu']['name'];
             $AdhesionController = new AdhesionController($db);
-            $AdhesionController->Join($nom, $telephone, $email, $adresse, $motdepasse,$photo,$carteidentite,$recu);
+            $AdhesionController->Join($nom, $telephone, $adresse,$photo,$carteidentite,$recu);
     
     
     }
