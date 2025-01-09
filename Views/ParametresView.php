@@ -25,14 +25,10 @@ class ParametresView {
             echo "    <img src='" . htmlspecialchars($diapo['photo']) . "' class='w-full h-32 object-cover rounded mb-2' alt='Diaporama'>";
             echo "    <h4 class='text-sm font-medium mb-2 truncate'>" . htmlspecialchars($diapo['title']) . "</h4>";
             echo "    <div class='flex gap-1'>";
-            echo "        <button onclick='ouvrirModifier(" . $diapo['id'] . ", \"" . htmlspecialchars($diapo['title']) . "\", \"" . htmlspecialchars($diapo['photo']) . "\")' ";
-            echo "                class='flex-1 bg-blue-500 hover:bg-blue-600 text-white text-xs py-1 px-2 rounded'>";
-            echo "            Modifier";
-            echo "        </button>";
-            echo "        <button href='../Pages/Parametres.php?action=supprimer&id=" . htmlspecialchars($diapo['id']) . "' onclick='confirmerSuppression(" . $diapo['id'] . ")' ";
-            echo "                class='flex-1 bg-red-500 hover:bg-red-600 text-white text-xs py-1 px-2 rounded'>";
+            echo "        <a href='../Pages/Parametres.php?action=supprimer&id=" . htmlspecialchars($diapo['id']) . "' onclick='confirmerSuppression(" . $diapo['id'] . ")' ";
+            echo "                class='flex-1 bg-red-500 hover:bg-red-600 text-white text-xs py-1 px-20 rounded'>";
             echo "            Supprimer";
-            echo "        </button>";
+            echo "        </a>";
             echo "    </div>";
             echo "</div>";
         }

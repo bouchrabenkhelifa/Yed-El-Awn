@@ -18,10 +18,7 @@ class ParametresController {
         $this->ParametresView->afficher($Diapos);
     }
 
-    public function modifier() {
-        $result = $this->DiaporamaModel->update($id, $title, $photo);
 
-    }
     public function supprimer($id) {
         if ($this->DiaporamaModel->supprimer($id)) {
             header('Location: ../Pages/Parametres.php'); 

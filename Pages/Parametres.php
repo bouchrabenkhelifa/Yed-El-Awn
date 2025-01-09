@@ -20,10 +20,6 @@ class Gestion {
         $ParametresController = new ParametresController($db);
         $ParametresController->Afficher();
         $ParametresController->handleRequest();
-
-       /* if (isset($_POST['action']) && $_POST['action'] === 'modifier') {
-            $ParametresController->modifier();
-        }*/
       
 }
 
