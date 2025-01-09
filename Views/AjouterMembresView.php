@@ -11,7 +11,7 @@ class AjouterMembresView {
             <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>       
             <link href='../output.css' rel='stylesheet' type='text/css'/>
         </head>
-        <body>
+        <body class='bg-gray-50 '>
             <div class='  ml-80 flex items-center justify-center'>
                 <div class='bg-white shadow-lg rounded-lg p-6 w-full max-w-3xl ml-auto mr-40'>
                     <h4 class='text-2xl text-blue-500 font-semibold mb-4 text-gray-800 text-center'>Ajouter un membre</h4>

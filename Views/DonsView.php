@@ -13,6 +13,8 @@ class DonsView {
         echo "<link href='../output.css' rel='stylesheet' type='text/css'/>";
         echo "<script src='../Js/Script.js'></script>";
         echo "</head>";
+        echo" <body class='bg-gray-50 '>";
+
         echo "<div class='w-3/4 float-right mr-12 p-6'>
             <div class='p-4 mb-4'>
                  <a href ='../Pages/GestionPartenaires.php'>
@@ -49,7 +51,7 @@ class DonsView {
                                 break;
                         }
 
-                        echo "<tr class='bg-white mt-4'>
+                        echo "<tr class='bg-white mt-8'>
                             <td class='px-4 py-2'>" . htmlspecialchars($Don['nom_donneur']) . "</td>
                             <td class='px-4 py-2'>" . htmlspecialchars($Don['date_don']) . "</td>
                             <td class='px-4 py-2'>" . htmlspecialchars($Don['montant']) . "</td>
@@ -64,7 +66,7 @@ class DonsView {
                 echo "</tbody>
                 </table>
             </div>
-        </div>";
+        </div></body>";
     }
 }
 

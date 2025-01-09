@@ -18,7 +18,7 @@ class NewsView {
         echo "</head>";
         echo "<body class='bg-gray-100'>";
         
-        echo "<div class='flex justify-center pt-12 min-h-screen'>";
+        echo "<div id='nouvelles'  class='flex justify-center pt-12 min-h-screen'>";
         echo "    <div class='container max-w-4xl py-12 py-4'>";
         
         echo "        <h2 class='text-3xl font-bold text-center mb-6' style='color: #6B46C1'>Nouvelles & Evenements</h2>";
@@ -28,7 +28,7 @@ class NewsView {
         foreach ($News as $nouvelle) {
           
             
-            echo "<div id='nouvelles' class='bg-white rounded-md shadow hover:shadow-md transition duration-300 mx-auto'>";
+            echo "<div class='bg-white rounded-md shadow hover:shadow-md transition duration-300 mx-auto'>";
             echo "    <div class='flex flex-col mb-5 md:flex-row'>";
             
             echo "        <div class='md:w-1/4'>";

@@ -41,7 +41,7 @@ class AssoView {
                     }
                 </style>";
         echo "</head>";
-        echo "<body class='bg-gray-100 font-sans'>";
+        echo "<body class='font-sans'>";
 
         // Association Section
         echo "<div class='w-full p-2 mb-6'>";

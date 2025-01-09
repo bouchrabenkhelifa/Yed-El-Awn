@@ -13,6 +13,8 @@ class BenevoleView {
             echo "<link href='../output.css' rel='stylesheet' type='text/css'/>";
             echo "  <script src='../Js/Script.js'></script>";
         echo "</head>";
+        echo" <body class='bg-gray-50 '>";
+
         echo "<div class='w-3/4 float-right mr-12  p-6'>
             <div class='p-4 mb-4'>
            
@@ -56,6 +58,8 @@ class BenevoleView {
             </div>
         </div>
         ";
+        echo" </body>";
+
     }
 }
 

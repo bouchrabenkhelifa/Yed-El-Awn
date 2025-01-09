@@ -19,8 +19,8 @@ class LogosSectionView {
                 </style>";
         echo "</head>";
         echo "<body class='bg-gray-50 min-h-screen'>";
-
-        echo "<div class='max-w-6xl mx-auto px-4 '>";
+        echo" <section id='partenaires'>";
+        echo "<div class='max-w-7xl mx-auto px-4 '>";
         
         echo "<div class='text-center mb-12'>";
         echo "    <a href='../Pages/Catalogue.php' class='inline-block group'>";
@@ -34,7 +34,7 @@ class LogosSectionView {
         echo "    <div class='relative flex overflow-x-auto space-x-12 py-8 px-4 justify-center items-center'>";
         
         foreach ($partenaires as $partenaire) {
-           echo" <section id='partenaires'>";
+        
             echo "<div class='flex-shrink-0 transform transition-all duration-300 hover:scale-105'>";
             echo "    <div class='relative group'>";
             echo "        <img src='" . htmlspecialchars($partenaire['logo']) . "' 
@@ -45,7 +45,7 @@ class LogosSectionView {
             echo "    <p class='text-center mt-3 text-sm font-medium text-purple-800 opacity-0 group-hover:opacity-100 
                          transition-opacity duration-300'>" . htmlspecialchars($partenaire['nom']) . "</p>";
             echo "</div>";
-            echo" </section>";
+           
 
         }
 
@@ -53,7 +53,7 @@ class LogosSectionView {
         echo "</div>";
         
         echo "</div>";
-
+        echo" </section>";
         echo "</body>";
         echo "</html>";
     }

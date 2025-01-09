@@ -24,13 +24,9 @@ class StatistiquesView {
         echo "</head>";
         echo "<body class='bg-gray-50 '>";
         
-        // Container avec grand espace en haut
         echo "<div class='max-w-lg mx-auto pt-24'>";
+                echo "<div class='space-y-6 mt-5'>";
         
-        // Grid avec espacement vertical
-        echo "<div class='space-y-6 mt-5'>";
-        
-        // Carte Membres
         echo "<div class='card-animation bg-white backdrop-blur-sm rounded-xl p-4 border border-blue-100 
               shadow-lg hover:shadow-2xl transition-all duration-300 
               hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 
@@ -43,7 +39,6 @@ class StatistiquesView {
         echo "<div class='mt-2 text-sm text-gray-500'>Membres actifs</div>";
         echo "</div>";
         
-        // Carte Partenaires
         echo "<div class='card-animation bg-white backdrop-blur-sm rounded-xl p-4 border border-green-100 
               shadow-lg hover:shadow-2xl transition-all duration-300 
               hover:bg-gradient-to-r hover:from-green-50 hover:to-emerald-50 
@@ -56,7 +51,6 @@ class StatistiquesView {
         echo "<div class='mt-2 text-sm text-gray-500'>Partenaires actifs</div>";
         echo "</div>";
         
-        // Carte Dons
         echo "<div class='card-animation bg-white backdrop-blur-sm rounded-xl p-4 border border-purple-100 
               shadow-lg hover:shadow-2xl transition-all duration-300 
               hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 

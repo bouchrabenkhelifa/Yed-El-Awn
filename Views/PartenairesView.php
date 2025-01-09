@@ -15,7 +15,8 @@ class PartenairesView {
             echo "<link href='../output.css' rel='stylesheet' type='text/css'/>";
             echo "  <script src='../Js/Script.js'></script>";
         echo "</head>";
-        
+        echo"        <body class='bg-gray-50 '>
+";
         echo "<div class='w-3/4 float-right mr-12  p-6'>
             <div class='p-4 mb-4'>
            <select id='villeFilter' class='border-2 border-blue-500 text-[#344054] p-1 px-3 text-sm rounded-lg'>
@@ -75,6 +76,7 @@ class PartenairesView {
                 </table>
             </div>
         </div>
+        </body>
         ";
     }
 }

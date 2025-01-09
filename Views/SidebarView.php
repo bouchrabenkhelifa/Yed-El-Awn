@@ -58,7 +58,7 @@ class SidebarView
                     </a>
                 </li>
                 <li class='flex items-center space-x-3 hover:bg-gray-700'>
-                    <a href='/parametres' class='flex items-center space-x-3 p-2 rounded'>
+                    <a href='../Pages/Parametres.php' class='flex items-center space-x-3 p-2 rounded'>
                         <img src='../Images/Parametres.png' alt='Paramètres' class='w-5 h-5'>
                         <span class='text-white text-sm'>Paramètres</span>
                     </a>
