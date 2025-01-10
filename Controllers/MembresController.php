@@ -47,14 +47,14 @@ class MembresController {
             exit();
         }
     }
-    public function ajouterMembre($nom, $telephone, $email, $adresse, $motdepasse) {
+    public function ajouterMembre($nom, $telephone, $adresse, $motdepasse) {
         try {
-            if (empty($nom) || empty($telephone) || empty($email) || empty($adresse) || empty($motdepasse)) {
+            if (empty($nom) || empty($telephone) || empty($adresse) || empty($motdepasse)) {
                 throw new Exception("Tous les champs requis doivent être remplis.");
             }
 
  
-            $this->MembresModel->ajouter($nom, $telephone, $email, $adresse,$motdepasse);
+            $this->MembresModel->ajouter($nom, $telephone,$adresse,$motdepasse);
             echo "Membre ajouté avec succès.";
         } catch (Exception $e) {
             echo "Erreur : " . $e->getMessage();
@@ -66,14 +66,19 @@ class MembresController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'modifierMembre') {
             echo "Méthode modifierMembre atteinte !"; // Debug
 
-            if (isset($_POST['id']) && isset($_POST['nom']) && isset($_POST['telephone']) && isset($_POST['email']) && isset($_POST['adresse'])) {
+            if (isset($_POST['id']) && isset($_POST['nom']) && isset($_POST['telephone'])  && isset($_POST['adresse'])) {
                 $id = $_POST['id'];
                 $nom = $_POST['nom'];
                 $telephone = $_POST['telephone'];
-                $email = $_POST['email'];
                 $adresse = $_POST['adresse'];
-                $result = $this->MembresModel->updateMembre($id, $nom, $telephone, $email, $adresse);
-                
+                $result = $this->MembresModel->updateMembre($id, $nom, $telephone, $adresse);
+                if ($result) {
+                    header("Location: Membres.php");
+                    exit();
+                } else {
+                    header("Location: ModifierMembre.php?id=" . $id . "&error=1");
+                    exit();
+                }
             }
         }
     }

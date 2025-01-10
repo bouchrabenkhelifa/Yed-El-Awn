@@ -24,5 +24,13 @@ class DonModel {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    public function updateStatut($id_don, $statut) {
+        $query = "UPDATE don SET statut = :statut WHERE id_don = :id_don";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':statut', $statut, PDO::PARAM_STR);
+        $stmt->bindParam(':id_don', $id_don, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
 }
     ?>

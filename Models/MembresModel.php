@@ -7,7 +7,6 @@ class MembresModel {
     public $id;
     public $nom;
     public $adresse;
-    public $email;
     public $telephone;
 
     public function __construct($db) {
@@ -34,26 +33,24 @@ class MembresModel {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    public function ajouter($nom,$telephone, $email, $adresse,$motdepasse) {
-        $sql = "INSERT INTO membre (nom, telephone, email, adresse,motdepasse) 
-                VALUES (:nom, :telephone, :email, :adresse,:motdepasse)";
+    public function ajouter($nom,$telephone, $adresse,$motdepasse) {
+        $sql = "INSERT INTO membre (nom, telephone, adresse,motdepasse) 
+                VALUES (:nom, :telephone, :adresse,:motdepasse)";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([
             ':nom' => $nom,
             ':telephone' => $telephone,
-            ':email' => $email,
             ':adresse' => $adresse,
             ':motdepasse' => password_hash($motdepasse, PASSWORD_DEFAULT) // Correct password hashing
         ]);
         return $this->conn->lastInsertId();
     }
-    public function updateMembre($id, $nom, $telephone, $email, $adresse) {
-        $sql = "UPDATE membre SET nom = :nom, telephone = :telephone, email = :email, adresse = :adresse WHERE id = :id";
+    public function updateMembre($id, $nom, $telephone, $adresse) {
+        $sql = "UPDATE membre SET nom = :nom, telephone = :telephone, adresse = :adresse WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':nom', $nom);
         $stmt->bindParam(':telephone', $telephone);
-        $stmt->bindParam(':email', $email);
         $stmt->bindParam(':adresse', $adresse);
         return $stmt->execute();
     }

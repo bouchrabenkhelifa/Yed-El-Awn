@@ -1,4 +1,8 @@
 <?php
+if (!defined('STARTED_OUTPUT_BUFFERING')) {
+    ob_start();
+    define('STARTED_OUTPUT_BUFFERING', true);
+}
 class SidebarView
 {
     public function AfficherSidebar()

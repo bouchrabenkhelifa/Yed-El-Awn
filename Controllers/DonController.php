@@ -26,5 +26,11 @@ class DonController {
 
     
 }
+public function modifierStatut($id_don, $statut) {
+    if (!in_array($statut, ['En attente', 'Accepté', 'Refusé'], true)) {
+        return false;
+    }
+    return $this->DonModel->updateStatut($id_don, $statut);
+}
 }
   ?>

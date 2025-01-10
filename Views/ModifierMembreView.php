@@ -29,10 +29,7 @@ class ModiferMembreView {
                             <label for='telephone' class='block text-gray-700 font-medium mb-2'>Numéro de téléphone</label>
                             <input type='text' name='telephone' id='telephone' placeholder='Numéro de téléphone' value='{$membre['telephone']}' class='w-full p-2 border-2 border-gray-100 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500' required>
                         </div>
-                        <div>
-                            <label for='email' class='block text-gray-700 font-medium mb-2'>Email</label>
-                            <input type='email' name='email' id='email' placeholder='Email' value='{$membre['email']}' class='w-full border-2 border-gray-100 p-2 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500' required>
-                        </div>
+                   
                         <div class='col-span-2'>
                             <label for='adresse' class='block text-gray-700 font-medium mb-2'>Adresse</label>
                             <input type='text' name='adresse' id='adresse' value='{$membre['adresse']}' class='w-full border-2 border-gray-100 p-2 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500' required>
