@@ -15,14 +15,21 @@ class AnnoncesView {
         }
         </script>";
         
-        echo "<body class='bg-gray-50'>";
-        echo "<div class='flex-1 mr-10 p-2 float-right'>";
-        
-        echo "<h1 class='text-3xl font-bold text-blue-600 mb-8'>Annonces</h1>";
+        echo "<body class='bg-gray-50'>
+
+   
+     </div>";
+
+        echo "<div class='flex-1 mr-10 p-2 float-right'>
+              <a href='../Pages/GestionAnnonce.php'>
+             <button class='bg-blue-500 border-2 border-blue-500 text-white p-1 px-3 text-sm rounded-lg'>
+                 <img src='../Images/Add.png' alt='Ajouter' class='inline-block mr-1 w-4 h-4'> Ajouter une annonce
+             </button>
+         </a>";
         echo "<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>"; 
         
         foreach ($Annonces as $Annonce) {
-            echo "<div class='bg-white rounded-lg shadow-lg p-3 hover:shadow-xl transition-shadow max-w-xs mx-auto'>";  
+            echo "<div class='bg-white my-10  rounded-lg shadow-lg p-3 hover:shadow-xl transition-shadow max-w-xs mx-auto'>";  
             echo "<h2 class='text-lg font-semibold text-gray-800 mb-2'>" . 
                  htmlspecialchars($Annonce['titre']) . "</h2>";
             
