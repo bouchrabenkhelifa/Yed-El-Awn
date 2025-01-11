@@ -4,13 +4,10 @@ require_once  '../Controllers/AideController.php';
 class AideView {
 
     public function afficherListeAide($Aides) {
-        // Paramètres de pagination
-        $items_par_page = 5; // Nombre d'aides par page
+        $items_par_page = 5; 
         $page_courante = isset($_GET['page']) ? (int)$_GET['page'] : 1;
         $total_items = count($Aides);
         $total_pages = ceil($total_items / $items_par_page);
-
-        // Calcul des index de début et de fin pour la page courante
         $debut = ($page_courante - 1) * $items_par_page;
         $Aides_page = array_slice($Aides, $debut, $items_par_page);
 
@@ -33,7 +30,6 @@ class AideView {
         echo "</a>";
         echo "</div>";
 
-        // Tableau des demandes d'aide
         echo "<div class='p-4'>";
         echo "<table class='min-w-full border-collapse'>";
         echo "<thead>";
@@ -58,7 +54,6 @@ class AideView {
         echo "</tbody>";
         echo "</table>";
 
-        // Pagination
         echo "<div class='mt-4 flex justify-center items-center space-x-2'>";
         if ($page_courante > 1) {
             echo "<a href='?page=" . ($page_courante - 1) . "' class='px-4 py-2 border rounded-lg hover:bg-gray-100'>Précédent</a>";
@@ -72,8 +67,8 @@ class AideView {
         }
         echo "</div>";
 
-        echo "</div>"; // Fermeture de la div tableau
-        echo "</div>"; // Fermeture de la div principale
+        echo "</div>";
+        echo "</div>";
         echo "</body>";
     }
 }

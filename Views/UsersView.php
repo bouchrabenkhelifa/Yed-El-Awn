@@ -54,7 +54,6 @@ class UsersView {
         echo "</tbody>";
         echo "</table>";
 
-        // Pagination
         echo "<div class='mt-4 flex justify-center items-center space-x-2'>";
         if ($page_courante > 1) {
             echo "<a href='?page=" . ($page_courante - 1) . "' class='px-4 py-2 border rounded-lg hover:bg-gray-100'>Précédent</a>";
