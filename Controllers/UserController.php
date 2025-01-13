@@ -32,9 +32,8 @@ class UserController {
         session_start();
         $_SESSION['id'] = $User['id'];
         $_SESSION['email'] = $User['email'];
-        header("Location: ../Pages/Adhesion.php");
-        exit();  
-    
+        header("Location: ../Pages/Remises.php");
+        exit();    
     }
     public function updateUserStatus($id, $statut) {
         if (!in_array($statut, ['validé', 'bloqué'], true)) {

@@ -3,6 +3,7 @@ require_once  '../Controllers/RemisesController.php';
 
 class RemisesView {
     public function afficher($Remises) {
+        
     
                 echo "<!DOCTYPE html>";
                 echo "<html lang='en'>";

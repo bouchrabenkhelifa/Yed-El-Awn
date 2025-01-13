@@ -21,8 +21,7 @@ class MenuController {
     }
 
     public function afficherAsso() {
-        $stmt = $this->MenuModel->getAsso();
-        $Association = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $Association = $this->MenuModel->getAsso();
         $this->AssoView->afficherAsso($Association);
     }
 

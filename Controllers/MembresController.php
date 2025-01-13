@@ -1,18 +1,24 @@
 <?php
 
 require_once __DIR__ . '/../Models/MembresModel.php';
+require_once __DIR__ . '/../Models/MenuModel.php';
 require_once __DIR__ . '/../Views/MembresView.php';
+require_once __DIR__ . '/../Views/CarteView.php';
 require_once __DIR__ . '/../Views/ModifierMembreView.php';
 
 class MembresController {
     private $MembresModel;
     private $MembresView;
+    private $association;
     private $ModifierMembreView;
+    private $CarteView;
 
     public function __construct($db) {
         $this->MembresModel = new MembresModel($db);
         $this->MembresView = new MembresView();
         $this->ModifierMembreView = new ModiferMembreView();
+        $this->CarteView = new CarteView();
+        $this->association = new MenuModel($db);
     }
 
     public function afficherMembres() {
@@ -82,6 +88,22 @@ class MembresController {
             }
         }
     }
+    public function AfficherCarte($idmembre) {
+        $membre = $this->MembresModel->getMembreById($idmembre);
+        if (!$membre) {
+            echo "Erreur : Membre introuvable avec ID $idmembre.";
+            return;
+        }
+    
+        $associations = $this->association->getAsso(); // Maintenant ceci retourne un tableau
+        if (!$associations) {
+            echo "Erreur : Associations introuvables.";
+            return;
+        }
+    
+        $this->CarteView->afficherCarte($membre, $associations);
+    }
+    
     
 }
 ?>

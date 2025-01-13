@@ -1,7 +1,7 @@
 <?php
 require_once '../Controllers/MenuController.php';
 require_once '../Controllers/FooterController.php';
-require_once '../Controllers/AdhesionController.php';
+require_once '../Controllers/AideController.php';
 require_once '../Views/UserNavbarView.php';
 require_once '../Configuration/Database.php';
 class Gestion {
@@ -14,28 +14,24 @@ class Gestion {
         $MenuController->afficherAsso();
         $Navbar = new UserNavbarView();
         $Navbar->afficher();
-        $AdhesionController = new AdhesionController($db);
-        $AdhesionController->afficherForm();
+        $Aide = new DemandeAideView();
+        $Aide->afficher();
         $FooterController = new FooterController();
         $FooterController->afficherFooter();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $nom = $_POST['nom'];
-            $telephone = $_POST['telephone'];
-            $adresse = $_POST['adresse'];
-            $carteidentite = $_FILES['carteidentite']['name'];
-            $photo = $_FILES['photo']['name'];
-            $recu = $_FILES['recu']['name'];
-            $AdhesionController = new AdhesionController($db);
-            $AdhesionController->Join($nom, $telephone, $adresse,$photo,$carteidentite,$recu);
-    
-    
-    }
+            $nom_demandeur = trim($_POST['nom_demandeur'] ?? '');
+            $date_naissance = trim($_POST['date_naissance'] ?? '');
+            $type_aide = trim($_POST['type_aide'] ?? '');
+            $date_demande = trim($_POST['date_demande'] ?? '');
+            $description = trim($_POST['description'] ?? '');
+            $AideController= new AideController($db);
+            $AideController->Ajouter($nom_demandeur, $date_naissance, $type_aide, $description,$date_demande);
     
     
     }
 }
 
-
+}
 $admin = new Gestion();
 $admin->Afficher();
 ?>

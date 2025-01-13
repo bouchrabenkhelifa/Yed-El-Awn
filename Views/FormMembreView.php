@@ -16,7 +16,7 @@ class FormMembreView {
         echo "<body class='bg-white font-sans'>
 
         <div class='max-w-4xl mx-auto mt-12 p-6 bg-gray-200 from-indigo-400 to-blue-400 rounded-xl shadow-xl'>
-            <h2 class='text-2xl font-semibold text-center text-indigo-600 mb-6'>Formulaire d'adhésion</h2>
+            <h2 class='text-2xl font-semibold text-center text-indigo-600 mb-6'>Devenir Membre dans YAD EL AWN</h2>
             <form action='../Pages/Adhesion.php' method='POST' enctype='multipart/form-data'>
                 <div class='grid grid-cols-1 md:grid-cols-2 gap-4 mb-6'>
                     <div>
