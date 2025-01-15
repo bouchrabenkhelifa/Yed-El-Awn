@@ -1,5 +1,5 @@
 <?php
-class NavbarMembreView {
+class NavbarMembre {
     public function afficher() {
         echo "<html lang='fr'>";
         echo "<head>";
@@ -46,6 +46,7 @@ class NavbarMembreView {
         echo "                <a href='../Pages/Remises.php' class='text-white font-semibold hover:text-gray-200'>Remises</a>";
         echo "                <a href='../Pages/DemandeAide.php' class='text-white font-semibold hover:text-gray-200'>Demande d'aide</a>";
         echo "                <a href='../Pages/FaireDon.php' class='text-white font-semibold hover:text-gray-200'>Don</a>";
+        echo "                <a href='../Pages/Benevolat.php' class='text-white font-semibold hover:text-gray-200'>Benevolat</a>";
         echo "                <a href='../Pages/Adhesion.php' class='text-white font-semibold hover:text-gray-200'>Acheter Carte</a>";
         echo "                <a href='#' class='text-white hover:text-gray-200'><img src='../Images/notification.png' alt='Notifications'></a>";
         

@@ -31,6 +31,22 @@ class DonModel {
         $stmt->bindParam(':id_don', $id_don, PDO::PARAM_INT);
         return $stmt->execute();
     }
-
+    
+    public function ajouter($nom_donneur, $montant, $recu, $methode_payement, $type_don, $statut, $date_don) {
+        $sql = "INSERT INTO don (nom_donneur, montant, recu, methode_payement, type_don, statut, date_don) 
+                VALUES (:nom_donneur, :montant, :recu, :methode_payement, :type_don, :statut, :date_don)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([
+            ':nom_donneur' => $nom_donneur,
+            ':montant' => $montant,
+            ':recu' => $recu,
+            ':methode_payement' => $methode_payement,
+            ':type_don' => $type_don,
+            ':statut' => $statut,
+            ':date_don' => $date_don
+        ]);
+    }
+    
+    
 }
     ?>
