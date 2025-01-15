@@ -21,5 +21,17 @@ class BenevoleModel {
         $stmt->execute();
         return $stmt;
     }
+    public function ajouter( $id_membre, $domaine_interet, $date_inscription, $id_evenement, $disponibilite) {
+        $sql = "INSERT INTO benevole  (id_membre, disponibilite, domaine_interet, date_inscription, id_evenement) 
+                VALUES ( :id_membre, :disponibilite, :domaine_interet, :date_inscription, :id_evenement)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([
+            ':id_membre' => $id_membre,
+            ':disponibilite' => $disponibilite,
+            ':domaine_interet' => $domaine_interet,
+            ':date_inscription' => $date_inscription,
+            ':id_evenement' => $id_evenement,
+        ]);
+    }
 }
     ?>

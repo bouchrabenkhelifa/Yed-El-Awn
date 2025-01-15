@@ -25,7 +25,7 @@ class Test {
         $MenuController = new MenuController($db);
         $MenuController->afficherAsso();
 
-        $Navbar = new NavbarMembreView();
+        $Navbar = new NavbarMembre();
         $Navbar->afficher();
 
         $idmembre = $_SESSION['membre_id'];

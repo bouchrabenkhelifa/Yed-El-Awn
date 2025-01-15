@@ -9,14 +9,14 @@ require_once '../Configuration/Database.php';
 class Gestion {
     public function Afficher()
     { 
-        session_start(); // Assurez-vous que la session est démarrée
+       session_start();
         
         $database = new Database();
         $db = $database->getConnection();
         $MenuController = new MenuController($db);
         $MenuController->afficherAsso();
 
-        if (isset($_SESSION['membre_id']) && $_SESSION['membre_id'] !== null) {
+       if (isset($_SESSION['membre_id']) && $_SESSION['membre_id'] !== null) {
             $Navbar = new NavbarMembre();
         } else {
             $Navbar = new UserNavbarView();

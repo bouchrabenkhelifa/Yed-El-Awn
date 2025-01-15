@@ -62,7 +62,7 @@ class SidebarView
                 </a>
             </li>
             <li class='flex items-center space-x-3 hover:bg-gray-700 '>
-                <a href='../Pages/GestionBenevoles.php' class='flex items-center space-x-3 p-2 rounded'>
+                <a href='../Pages/Benevoles.php' class='flex items-center space-x-3 p-2 rounded'>
                     <img src='../Images/Personne.png' alt='Bénévoles' class='w-5 h-4'>
                     <span class='text-white text-sm'>Gestion des Bénévoles</span>
                 </a>

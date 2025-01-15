@@ -48,6 +48,10 @@ class UserNavbarView {
                     <i class='fas fa-hands-helping mr-1'></i>
                     Demande d'aide
                 </a>
+                  <a href='../Pages/FaireDon.php' class='text-white hover:text-gray-200 font-medium'>
+<i class='fas fa-donate mr-1'></i>
+                    Don
+                </a>
                 <a href='../Pages/Adhesion.php' class='text-white hover:text-gray-200 font-medium'>
                     <i class='fas fa-user-plus mr-1'></i>
                     Inscription

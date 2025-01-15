@@ -23,7 +23,7 @@ class BenevoleView {
 
         echo "<div class='w-3/4 float-right mr-12 p-6'>";
         echo "<div class='p-4 mb-4'>";
-        echo "<a href ='../Pages/GestionBenevole.php'>";
+        echo "<a href ='../Pages/GestionBenevoles.php'>";
         echo "<button class='bg-blue-500 border-2 border-blue-500 text-white p-1 px-3 text-sm rounded-lg'>";
         echo "<img src='../Images/Add.png' alt='Ajouter' class='inline-block mr-1 w-4 h-4'> Ajouter un bénévole";
         echo "</button>";

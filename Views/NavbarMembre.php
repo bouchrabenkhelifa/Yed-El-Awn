@@ -64,7 +64,7 @@ echo "                        <a href='../Pages/Tracabilite.php' class='block px
 echo "                            <i class='fas fa-history mr-2'></i>Historique";
 echo "                        </a>";
 echo "                        <hr class='my-1 border-gray-200'>";
-echo "                        <a href='../Pages/Connexion.php' class='block px-4 py-2 text-red-600 hover:bg-red-50 hover:text-red-700'>";
+echo "                        <a href='../Pages/Logout.php'  class='block px-4 py-2 text-red-600 hover:bg-red-50 hover:text-red-700'>";
 echo "                            <i class='fas fa-sign-out-alt mr-2'></i>Déconnexion";
 echo "                        </a>";
 echo "                    </div>";
