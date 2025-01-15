@@ -59,11 +59,11 @@ echo "                      <div id='settingsDropdown' class='settings-dropdown'
 echo "                        <a href='../Pages/Parametres.php' class='block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900'>";
 echo "                            <i class='fas fa-cog mr-2'></i>Paramètres";
 echo "                        </a>";
-echo "                        <a href='../Pages/Historique.php' class='block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900'>";
+echo "                        <a href='../Pages/Tracabilite.php' class='block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900'>";
 echo "                            <i class='fas fa-history mr-2'></i>Historique";
 echo "                        </a>";
 echo "                        <hr class='my-1 border-gray-200'>";
-echo "                        <a href='../Auth/logout.php' class='block px-4 py-2 text-red-600 hover:bg-red-50 hover:text-red-700'>";
+echo "                        <a href='../Pages/Connexion.php' class='block px-4 py-2 text-red-600 hover:bg-red-50 hover:text-red-700'>";
 echo "                            <i class='fas fa-sign-out-alt mr-2'></i>Déconnexion";
 echo "                        </a>";
 echo "                    </div>";
