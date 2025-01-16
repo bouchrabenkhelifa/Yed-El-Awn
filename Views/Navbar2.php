@@ -47,9 +47,10 @@ class Navbar2 {
         echo "                <a href='#zone' class='text-white font-semibold hover:text-gray-200'>Nouvelles </a>";
         echo "                <a href='#avantages' class='text-white font-semibold hover:text-gray-200'>Avantages</a>";
         echo "                <a href='#partenaires' class='text-white font-semibold hover:text-gray-200'>Nos partenaires</a>";
+        echo "                <a href='../Pages/Connexion.php' class='text-white font-semibold hover:text-gray-200'>Connexion</a>";
+
         echo "                <a href='#contact' class='text-white font-semibold hover:text-gray-200'>Contact</a>";
-        
-  
+      
 echo "            </div>";
 echo "        </div>";
 echo "    </nav>";

@@ -21,7 +21,7 @@ class NewsView {
         echo "<div id='zone'  class='flex justify-center pt-12 min-h-screen'>";
         echo "    <div class='container max-w-4xl py-12 py-4'>";
         
-        echo "        <h2 class='text-3xl font-bold text-center mb-6' style='color: #6B46C1'>Nouvelles & Evenements</h2>";
+        echo " <a href='../Pages/Zone.php'>   <h2 class='text-3xl font-bold text-center mb-6' style='color: #6B46C1'>Nouvelles & Evenements</h2></a>";
         
         echo "        <div class='space-y-4 py-8'>";
         
@@ -44,7 +44,7 @@ class NewsView {
                               htmlspecialchars($nouvelle['titre']) . "</h2>";
             echo "            <p class='text-sm text-gray-600 mb-3'>" . 
                               htmlspecialchars($nouvelle['description']) . "</p>";
-            echo "            <a href='#' class='inline-block px-4 py-1 text-sm rounded-full text-white' 
+            echo "            <a href='../Pages/Zone.php' class='inline-block px-4 py-1 text-sm rounded-full text-white' 
                               style='background-color: #6B46C1'>Lire plus</a>";
             echo "        </div>";
             echo "    </div>";
