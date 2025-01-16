@@ -16,6 +16,7 @@ class MesOffresView {
         echo "<div class='w-3/4 float-right mt-20 mr-12 p-6'>";
         echo "<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>";
         foreach ($Offres as $Offre) {
+            echo "<a href='../Pages/Beneficier.php?id=" . htmlspecialchars($Offre['idoffre']) . "' class='pt-2 '> ";
             echo "<div class='bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105'>";
             echo "<div class='p-6'>";
             echo "<div class='text-xl font-bold text-gray-800 mb-3'>";
@@ -42,6 +43,7 @@ class MesOffresView {
             echo "</div>"; 
             echo "</div>";
             echo "</div>"; 
+            echo"</a>";
         }
         
         echo "</div>"; 

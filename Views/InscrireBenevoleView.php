@@ -17,7 +17,12 @@ class InscrireBenevoleView {
         echo "    <h2 class='text-2xl font-semibold text-center text-indigo-600 mb-6'>Formulaire d'Ajout de Bénévole</h2>";
         echo "    <form action='../Pages/GestionBenevoles.php' method='POST' enctype='multipart/form-data'>";
         
-      
+        // ID Membre
+        echo "    <div class='mb-4'>";
+        echo "        <label for='id_membre' class='block text-sm font-medium text-gray-700'>ID Membre</label>";
+        echo "        <input type='number' id='id_membre' name='id_membre' placeholder='ID Membre' required 
+                        class='mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 focus:border-indigo-500 focus:ring-indigo-500'>";
+        echo "    </div>";
         
         // Disponibilité
         echo "    <div class='mb-4'>";

@@ -24,6 +24,8 @@ class OffresController {
         $Offres = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $this->OffresView->afficherListePartenaires($Offres);
     }
+
+    
     public function AfficherPartenaireOffres($idpartenaire) {
         try {
             $Offres = $this->OffresModel->getPartenaireOffres($idpartenaire);
