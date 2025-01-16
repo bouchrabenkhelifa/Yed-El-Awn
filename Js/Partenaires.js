@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+
+//Filtre chez l'admin
 document.addEventListener('DOMContentLoaded', function() {
     // Récupérer le select de filtrage
     const villeFilter = document.getElementById('villeFilter');
@@ -63,6 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Afficher dans la console pour le débogage
     console.log('Script de filtrage chargé');
 });
+
+
+
+
         
         
         

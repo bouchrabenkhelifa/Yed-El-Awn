@@ -19,8 +19,10 @@ class BenevoleController {
     }
     public function Ajouter($id_membre, $domaine_interet, $date_inscription, $id_evenement, $disponibilite) {
         try {
-            if (empty($id_membre) || empty($domaine_interet) || empty($date_inscription) || empty($id_evenement) || empty($disponibilite)) {
-                throw new Exception("Tous les champs requis doivent être remplis.");
+    
+            if (empty($disponibilite) || empty($domaine_interet) || empty($date_inscription) || empty($id_evenement)) {
+                echo "Erreur : Tous les champs doivent être remplis.";
+                exit;
             }
         
             $this->BenevoleModel->ajouter($id_membre, $domaine_interet, $date_inscription, $id_evenement, $disponibilite);

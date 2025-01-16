@@ -36,12 +36,15 @@ class LogosSectionView {
         foreach ($partenaires as $partenaire) {
         
             echo "<div class='flex-shrink-0 transform transition-all duration-300 hover:scale-105'>";
+            echo" <a href='http://localhost/projets/YadElAwn/Pages/Catalogue.php'>";
             echo "    <div class='relative group'>";
             echo "        <img src='" . htmlspecialchars($partenaire['logo']) . "' 
                           alt='Logo de " . htmlspecialchars($partenaire['nom']) . "' 
                           class='w-32 h-32 object-contain bg-white rounded-full p-4 
                                  transition-all duration-300 purple-shadow'>";
             echo "    </div>";
+            echo" </a>";
+
             echo "    <p class='text-center mt-3 text-sm font-medium text-purple-800 opacity-0 group-hover:opacity-100 
                          transition-opacity duration-300'>" . htmlspecialchars($partenaire['nom']) . "</p>";
             echo "</div>";

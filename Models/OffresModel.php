@@ -21,5 +21,14 @@ class OffresModel {
             ':description' => $description,
         ]);
     }
-}
+    public function getPartenaireOffres($idpartenaire) {
+        $sql = "SELECT o.* FROM Offre o 
+                JOIN partenaire p ON o.idpartenaire = p.idpartenaire 
+                WHERE p.idpartenaire = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(1, $idpartenaire, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+}}
     ?>

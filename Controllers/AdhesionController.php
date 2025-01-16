@@ -15,7 +15,7 @@ class AdhesionController {
         $this->FormMembreView->afficher();
     }
     
-    public function Join($nom, $telephone,$adresse,$photo,$carteidentite,$recu) {
+    public function Join($nom, $telephone,$adresse,$photo,$carteidentite,$recu,$date_enregistrement,$id_utilisateur) {
         try {
             if (empty($nom) || empty($telephone) || empty($adresse)) {
                 throw new Exception("Tous les champs requis doivent être remplis.");
@@ -32,7 +32,7 @@ class AdhesionController {
             
 
  
-            $this->AdhesionModel->ajouter($nom, $telephone,$adresse,$photo,$carteidentite,$recu);
+            $this->AdhesionModel->ajouter($nom, $telephone,$adresse,$photo,$carteidentite,$recu,$carteidentite,$recu,$date_enregistrement,$id_utilisateur);
             echo "Demande d'adhesion envoyée";
         } catch (Exception $e) {
             echo "Erreur : " . $e->getMessage();

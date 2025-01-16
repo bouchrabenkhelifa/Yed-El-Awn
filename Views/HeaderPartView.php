@@ -1,15 +1,6 @@
 <?php
 class HeaderPartView {
     public function afficher() {
-        session_start();
-
-        // Check if the partner is logged in
-        if (!isset($_SESSION['partenaire'])) {
-            header("Location: Connexion.php");
-            exit();
-        }
-
-        // Get partner name and logo from session
         $nomPartenaire = $_SESSION['nompartenaire'];
         $logoPartenaire = $_SESSION['logopartenaire'];
 
@@ -44,21 +35,18 @@ class HeaderPartView {
         echo "            <span>Vérifier manuellement</span>";
         echo "        </li>";
         echo "        <li class='flex items-center space-x-2 cursor-pointer px-4 py-2 rounded hover:bg-yellow-400'>";
-        echo "            <img src='../Images/team.png' alt='Mon compte' class='w-6 h-6'>";
-        echo "            <span>Mon compte</span>";
+        echo '            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M16 17v2c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v2h-2V5H5v14h9v-2h2z"/>
+                            <path fill="currentColor" d="M21 12l-4-4v3H9v2h8v3l4-4z"/>
+                         </svg>';
+        echo "            <a href='../Pages/Logout.php' class='text-white font-semibold  '><span>Déconnexion</span></a>";
         echo "        </li>";
         echo "    </ul>";
         echo "</div>";
 
         // Main Content
-        echo "<div class='flex-1 flex flex-col'>";
-        echo "    <div class='p-4 flex justify-between items-center'>";
-        echo "        <h2 class='text-lg font-bold text-yellow-700'>Hello " . $nomPartenaire . "!</h2>";
-        echo "        <button class='bg-yellow-500 text-white px-4 py-2 rounded shadow hover:bg-yellow-400'>";
-        echo "            Ajouter";
-        echo "        </button>";
-        echo "    </div>";
-        echo "</div>";
+        echo "<h2 class='text-lg p-2 font-bold text-yellow-700'>Hello {$nomPartenaire}!</h2>";
+        
 
         echo "</body>";
         echo "</html>";

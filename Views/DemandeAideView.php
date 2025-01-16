@@ -20,7 +20,7 @@ class DemandeAideView {
         echo "<form action='../Pages/DemandeAide.php' method='POST' enctype='multipart/form-data'>";
         echo "    <div class='mb-4'>";
         echo "        <label for='nom_demandeur' class='block text-sm font-medium text-gray-700'>Nom du demandeur</label>";
-       echo" <input type='text' id='nom_demandeur' name='nom_demandeur' required 
+       echo" <input type='text' id='nom_demandeur' name='nom_demandeur' placeholder='Nom demandeur' required 
         class='mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 focus:border-indigo-500 focus:ring-indigo-500'>";
         echo "    </div>";
         echo "    <div class='mb-4'>";
@@ -47,7 +47,7 @@ class DemandeAideView {
         echo "    </div>";
         echo "    <div class='mb-4'>";
         echo "        <label for='description' class='block text-sm font-medium text-gray-700'>Description de la demande</label>";
-        echo "        <textarea id='description' name='description' rows='4' required 
+        echo "        <textarea id='description' name='description' rows='4' placeholder='Description détaillée de la demande' required 
                       class='mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 focus:border-indigo-500 focus:ring-indigo-500'></textarea>";
         echo "    </div>";
         

@@ -25,8 +25,11 @@ class Gestion {
             $carteidentite = $_FILES['carteidentite']['name'];
             $photo = $_FILES['photo']['name'];
             $recu = $_FILES['recu']['name'];
+            $date_enregistrement = $_POST['date_enregistrement'];
+            $id_utilisateur = $_POST['id_utilisateur'];
+
             $AdhesionController = new AdhesionController($db);
-            $AdhesionController->Join($nom, $telephone, $adresse,$photo,$carteidentite,$recu);
+            $AdhesionController->Join($nom, $telephone, $adresse,$photo,$carteidentite,$recu,$date_enregistrement,$id_utilisateur);
     
     
     }

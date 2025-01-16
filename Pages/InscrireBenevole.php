@@ -11,9 +11,8 @@ require_once '../Configuration/Database.php';
 class GestionDon {
     public function Afficher() {
         
-       
         session_start(); 
-        
+
         $database = new Database();
         $db = $database->getConnection();
         $MenuController = new MenuController($db);
@@ -30,15 +29,15 @@ class GestionDon {
         $InscrireBenevoleView->Form();
         $FooterController = new FooterController();
         $FooterController->afficherFooter();
+        $id_membre = (int) $_SESSION['membre_id'];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $id_membre = trim($_POST['id_membre'] ?? '');
             $disponibilite = trim($_POST['disponibilite'] ?? '');
             $domaine_interet = trim($_POST['domaine_interet'] ?? '');
             $date_inscription = trim($_POST['date_inscription'] ?? '');
             $id_evenement = trim($_POST['id_evenement'] ?? '');
             $BenevoleController = new BenevoleController($db);
-            $BenevoleController->Ajouter($id_membre, $domaine_interet, $date_inscription, $id_evenement, $disponibilite);}
-        
+            $BenevoleController->Ajouter($id_membre, $domaine_interet, $date_inscription, $id_evenement, $disponibilite);
+        }
     }
 }
 

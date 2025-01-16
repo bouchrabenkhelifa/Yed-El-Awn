@@ -20,8 +20,8 @@ class FooterView {
         echo "</head>";
         echo "<body>";
 echo"<section id='contact'>"; 
-        echo "<footer class='menu-gradient text-white mt-20 py-8'>";
-        echo "    <div class='container mx-auto px-4'>";
+echo "<footer style='background-color: #6B46C1; color: #ffffff;' class='py-8 mt-20 '>";
+echo "    <div class='container  mx-auto px-4'>";
 
         echo "        <div class='text-center'>";
         echo "           <a href='../Pages/AdminConnexion'> <h2 class='text-2xl font-bold'>YAD EL AWN</h2></a>";

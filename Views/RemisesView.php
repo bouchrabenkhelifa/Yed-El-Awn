@@ -14,18 +14,18 @@ class RemisesView {
                 echo "    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>";
                 echo "    <script src='../Js/Script.js'></script>";
                 echo "</head>";
-                echo "<body class='bg-gray-50 font-sans'>";
+                echo "<body class='bg-gray-50 font-sans '>";
         
                 // Header
-                echo "<div class=' text-white text-center p-4'>
-                        <h1 style='color:#6B46C1' class='text-3xl font-semibold'>Liste des Remises</h1>
+                echo "<div id='avantages' class=' text-white text-center p-4'>
+                        <h1 style='color:#6B46C1' class='text-3xl font-semibold'>Remises & Avantages</h1>
                       </div>";
         
                 // Container for the list of remises
                 echo "<div class='container mx-auto p-4'>";
         
                 // Loop through the remises and display them
-                echo "<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>"; // responsive grid layout
+                echo "<div class='grid grid-cols-1 mb-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>"; // responsive grid layout
         
                 foreach ($Remises as $remise) {
                     echo "<div class='bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300'>";

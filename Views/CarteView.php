@@ -14,7 +14,7 @@ class CarteView {
             <script src='../Js/Script.js'></script>
         </head>
         <body class=' flex  justify-center items-center min-h-screen p-4'>
-            <div class='max-w-sm mx-auto mt-20 w-full'>
+            <div class='max-w-sm mx-auto mt-20 mb-20 w-full'>
                 <div class='bg-gray-100 shadow-md rounded-lg p-6'>
                     <div class='flex items-center mb-4 border-b pb-3'>
                         <div class='flex-shrink-0'>

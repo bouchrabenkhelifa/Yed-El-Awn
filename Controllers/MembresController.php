@@ -53,19 +53,7 @@ class MembresController {
             exit();
         }
     }
-    public function ajouterMembre($nom, $telephone, $adresse, $motdepasse) {
-        try {
-            if (empty($nom) || empty($telephone) || empty($adresse) || empty($motdepasse)) {
-                throw new Exception("Tous les champs requis doivent être remplis.");
-            }
 
- 
-            $this->MembresModel->ajouter($nom, $telephone,$adresse,$motdepasse);
-            echo "Membre ajouté avec succès.";
-        } catch (Exception $e) {
-            echo "Erreur : " . $e->getMessage();
-        }
-    }
 
     
     public function modifierMembre() {

@@ -55,7 +55,14 @@ class LoginView {
                                 class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Se connecter
                         </button>
+            
                     </div>
+                    <div class='mt-4 text-center'>
+                    <p class='text-sm text-gray-600'>
+                        Créer un compte? 
+                        <a href='../Pages/Inscription.php' class='text-blue-600 hover:text-blue-800 font-semibold'>Sign up</a>
+                    </p>
+                </div>
                 </form>
             </div>
         </body>

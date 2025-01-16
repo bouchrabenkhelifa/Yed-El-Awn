@@ -33,14 +33,16 @@ class MembresModel {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    public function ajouter($nom,$telephone, $adresse,$motdepasse) {
-        $sql = "INSERT INTO membre (nom, telephone, adresse,motdepasse) 
-                VALUES (:nom, :telephone, :adresse,:motdepasse)";
+    public function ajouter($nom,$telephone, $adresse,$motdepasse,$date_enregistrement,$id_utilisateur) {
+        $sql = "INSERT INTO membre (nom, telephone, adresse,motdepasse,date_enregistrement,id_utilisateur) 
+                VALUES (:nom, :telephone, :adresse,:motdepasse,:date_enregistrement,:id_utilisateur)";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([
             ':nom' => $nom,
             ':telephone' => $telephone,
             ':adresse' => $adresse,
+            ':date_enregistrement' => $date_enregistrement,
+            ':id_utilisateur' => $id_utilisateur,
             ':motdepasse' => password_hash($motdepasse, PASSWORD_DEFAULT) // Correct password hashing
         ]);
         return $this->conn->lastInsertId();
