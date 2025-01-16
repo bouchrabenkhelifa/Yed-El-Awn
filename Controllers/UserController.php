@@ -17,7 +17,6 @@ class UserController {
         $Users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $this->UsersView->afficher($Users);
     }
-
     public function login($email, $password) {
         $User = $this->UserModel->getUser($email);
         
@@ -67,7 +66,6 @@ class UserController {
         header("Location: ../Pages/Connexion.php");
         exit();
     }
-
     public function updateUserStatus($id, $statut) {
         if (!in_array($statut, ['validé', 'bloqué'], true)) {
             return false;
@@ -78,4 +76,3 @@ class UserController {
 }
 
 ?>
-

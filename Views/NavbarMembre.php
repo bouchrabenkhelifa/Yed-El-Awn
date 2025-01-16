@@ -43,11 +43,11 @@ class NavbarMembre {
         echo "    <nav class='gradient-custom shadow-md'>";      
         echo "        <div class='container mx-auto px-4 py-3 flex items-center justify-between'>";
         echo "            <div class='flex items-center space-x-6 ml-auto'>";
-        echo "                <a href='../Pages/Remises.php' class='text-white font-semibold hover:text-gray-200'>Remises</a>";
+        echo "                <a href='../Pages/CompteMembre.php' class='text-white font-semibold hover:text-gray-200'>Remises</a>";
         echo "                <a href='../Pages/DemandeAide.php' class='text-white font-semibold hover:text-gray-200'>Demande d'aide</a>";
         echo "                <a href='../Pages/FaireDon.php' class='text-white font-semibold hover:text-gray-200'>Don</a>";
-        echo "                <a href='../Pages/Benevolat.php' class='text-white font-semibold hover:text-gray-200'>Benevolat</a>";
-        echo "                <a href='../Pages/Adhesion.php' class='text-white font-semibold hover:text-gray-200'>Acheter Carte</a>";
+        echo "                <a href='../Pages/InscrireBenevole.php' class='text-white font-semibold hover:text-gray-200'>Benevolat</a>";
+        echo "                <a href='#' class='text-white font-semibold hover:text-gray-200'>Acheter Carte</a>";
         echo "                <a href='#' class='text-white hover:text-gray-200'><img src='../Images/notification.png' alt='Notifications'></a>";
         
         echo "                <div class='relative'>";

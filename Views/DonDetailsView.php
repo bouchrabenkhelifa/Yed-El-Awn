@@ -12,8 +12,8 @@ class DonDetailsView {
         echo "</head>";
         echo "<body class='bg-gray-50'>";
 
-        echo "<div class='max-w-2xl mx-auto py-8 px-4'>";
-        echo "<div class='bg-white rounded-lg shadow-md p-6'>";
+        echo "<div class='max-w-2xl mx-auto py-8  px-4'>";
+        echo "<div class='bg-white rounded-lg mt-20 shadow-md p-6'>";
 
         // Header section
         echo "<div class='border-b border-gray-200 pb-3 mb-5'>";

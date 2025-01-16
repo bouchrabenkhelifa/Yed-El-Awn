@@ -26,7 +26,7 @@ class OffresView {
         echo "<body class='bg-gray-50'>";
         echo "<div class='w-3/4 float-right mr-12 p-6'>
             <div class='px-4 mb-4'>
-                <a href='http://localhost/projets/YadElAwn/Controllers/GestionPartenaires.php'>
+                <a href='../Pages/GestionOffre.php'>
                     <button class='bg-blue-500 border-2 border-blue-500 text-white p-1 px-3 text-sm rounded-lg'>
                         <img src='../Images/Add.png' alt='Ajouter' class='inline-block mr-1 w-4 h-4'> Ajouter un offre
                     </button>

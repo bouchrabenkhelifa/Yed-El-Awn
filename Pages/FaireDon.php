@@ -28,6 +28,8 @@ class GestionDon {
 
         $AjouterDonView = new FaireDonView();
         $AjouterDonView->Form();
+        $FooterController = new FooterController();
+        $FooterController->afficherFooter();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $nom_donneur = trim($_POST['nom_donneur'] ?? '');
                 $montant = trim($_POST['montant'] ?? '');

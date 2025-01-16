@@ -34,12 +34,13 @@ class BenevoleView {
         echo "<table class='min-w-full border-collapse'>";
         echo "<thead>";
         echo "<tr class='bg-gray-200'>";
-        echo "<td class='px-4 py-2 text-left text-gray-500'>Logo</td>";
         echo "<td class='px-4 py-2 text-left flex text-gray-500'>Nom du bénévole</td>";
         echo "<td class='px-4 py-2 text-left text-gray-500'>Événement</td>";
         echo "<td class='px-4 py-2 flex text-left text-gray-500'>Domaine d'intérêt</td>";
         echo "<td class='px-4 py-2 text-left text-gray-500'>Disponibilité</td>";
         echo "<td class='px-4 py-2 text-left text-gray-500'>Téléphone</td>";
+        echo "<td class='px-4 py-2 text-left text-gray-500'>Gestion</td>";
+
         echo "</tr>";
         echo "</thead>";
         echo "<tbody>";

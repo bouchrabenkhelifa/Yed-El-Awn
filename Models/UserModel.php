@@ -6,7 +6,12 @@ class UserModel {
     public function __construct($db) {
         $this->conn = $db;
     }
-    
+    public function getAll() {
+        $query = "SELECT * FROM utilisateur";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
     public function getUser($email) {
         try {
             $query = "SELECT u.*, m.id as membre_id 
@@ -29,7 +34,19 @@ class UserModel {
             return null;
         }
     }
-    
+    public function updateStatus($id, $statut) {
+        try {
+            $query = "UPDATE utilisateur SET statut = :statut WHERE id = :id";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':statut', $statut, PDO::PARAM_STR);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
+            return false;
+        }
+    }
+
     public function getMembre($userId) {
         try {
             $query = "SELECT * FROM membre WHERE id_utilisateur = :id";

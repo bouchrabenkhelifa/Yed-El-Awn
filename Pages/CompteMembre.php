@@ -4,6 +4,8 @@ require_once '../Controllers/FooterController.php';
 require_once '../Controllers/MembresController.php';
 require_once '../Views/NavbarMembre.php';
 require_once '../Configuration/Database.php';
+require_once '../Controllers/RemisesController.php';
+
 class test {
     public function Afficher()
    { session_start();
@@ -20,6 +22,8 @@ class test {
         $MembresController = new MembresController($db);
         $idmembre = $_SESSION['membre_id'];
         $MembresController->AfficherCarte($idmembre);
+        $RemisesController = new RemisesController($db);
+        $RemisesController->afficher();
         $FooterController = new FooterController();
         $FooterController->afficherFooter();
    

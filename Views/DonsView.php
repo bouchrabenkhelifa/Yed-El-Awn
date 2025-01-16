@@ -41,6 +41,7 @@ class DonsView {
         echo "<td class='px-4 py-2 text-left text-gray-500'>Méthode de paiement</td>";
         echo "<td class='px-4 py-2 text-left text-gray-500'>Type de don</td>";
         echo "<td class='px-4 py-2 text-left text-gray-500'>Statut</td>";
+        echo "<td class='px-4 py-2 text-left text-gray-500'>Details</td>";
         echo "</tr>";
         echo "</thead>";
         echo "<tbody>";
@@ -69,6 +70,9 @@ class DonsView {
             echo "<a href='../Pages/DonDetails.php?id=" . htmlspecialchars($Don['id_don']) . "'>";
             echo "<span class='$statutClass'>" . htmlspecialchars($Don['statut']) . "</span>";
             echo "</a>";
+            echo "</td>";
+            echo "<td class='py-2 text-blue-500 flex space-x-2'>";
+            echo "<a href='../Pages/DonDetails.php?id=" . htmlspecialchars($Don['id_don']) . "' class='pt-2 '> Cliquer ici</a>";
             echo "</td>";
             echo "</tr>";
         }

@@ -61,7 +61,7 @@ class UserNavbarView {
                         <i class='fas fa-sign-out-alt text-xl'></i>
                     </button>
                     <div id='settingsDropdown' class='settings-dropdown'>
-                        <a href='../Pages/Connexion.php' 
+                        <a href='../Pages/Logout.php' 
                            class='flex items-center px-4 py-3 text-red-600 hover:bg-red-50 hover:text-red-700 rounded-md transition-colors duration-200'>
                             <i class='fas fa-sign-out-alt mr-2'></i>
                             <span>Déconnexion</span>
