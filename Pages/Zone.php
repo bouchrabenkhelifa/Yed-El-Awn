@@ -13,8 +13,7 @@ class test {
         $db = $database->getConnection();
         $MenuController = new MenuController($db);
         $MenuController->afficherAsso();
-        $Navbar2 = new Navbar2();
-        $Navbar2->afficher();
+        $MenuController->afficherMenu();
         $NewsController = new NewsController($db);
         $NewsController->afficherNews();
         $RemisesController = new RemisesController($db);

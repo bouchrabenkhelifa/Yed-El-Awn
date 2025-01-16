@@ -42,8 +42,6 @@ class AssoView {
                 </style>";
         echo "</head>";
         echo "<body class='font-sans'>";
-
-        // Association Section
         echo "<div class='w-full p-2 mb-6'>";
         if (!empty($Association)) {
             echo "<div class='flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto'>";
@@ -82,9 +80,7 @@ class AssoView {
         echo "<script>
                 lucide.createIcons();
               </script>";
-
-        echo "</body>";
-        echo "</html>";
+ echo "</body>"; echo "</html>";
     }
 }
 ?>

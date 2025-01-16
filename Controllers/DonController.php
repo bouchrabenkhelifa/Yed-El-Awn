@@ -46,7 +46,6 @@ public function AjouterDon($nom_donneur, $montant, $recu, $methode_payement, $ty
             throw new Exception("Erreur lors du téléchargement du reçu.");
         }
 
-        // Enregistrer les données
         $this->DonModel->ajouter($nom_donneur, $montant, $targetFile, $methode_payement, $type_don, $statut, $date_don);
         echo "Don ajouté avec succès.";
     } catch (Exception $e) {

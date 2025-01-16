@@ -54,7 +54,6 @@ class BenevoleView {
             echo "<td class='px-4 py-2'>" . htmlspecialchars($Benevole['telephone']) . "</td>";
             echo "<td class='px-4 py-2 flex space-x-2'>";
             echo "<button><img src='../Images/Trash.png' alt='Supprimer' class='cursor-pointer'></button>";
-            echo "<img src='../Images/Modify.png' alt='Modifier' class='w-5 h-5 mt-2 cursor-pointer'>";
             echo "</td>";
             echo "</tr>";
         }

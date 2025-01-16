@@ -10,25 +10,16 @@ class AnnoncesView {
         echo "<script>
         function confirmerSuppression(id) {
             if(confirm('Êtes-vous sûr de vouloir supprimer cet annonce ?')) {
-                window.location.href = 'Annonces.php?supprimer=' + id;
-            }
-        }
-        </script>";
-        
-        echo "<body class='bg-gray-50'>
-
-   
-     </div>";
-
-        echo "<div class='flex-1 mr-10 p-2 float-right'>
+                window.location.href = 'Annonces.php?supprimer=' + id;}} </script>";
+         echo "<body class='bg-gray-50'> </div>";
+  echo "<div class='flex-1 mr-10 p-2 float-right'>
               <a href='../Pages/GestionAnnonce.php'>
              <button class='bg-blue-500 border-2 border-blue-500 text-white p-1 px-3 text-sm rounded-lg'>
                  <img src='../Images/Add.png' alt='Ajouter' class='inline-block mr-1 w-4 h-4'> Ajouter une annonce
              </button>
          </a>";
         echo "<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>"; 
-        
-        foreach ($Annonces as $Annonce) {
+         foreach ($Annonces as $Annonce) {
             echo "<div class='bg-white my-10  rounded-lg shadow-lg p-3 hover:shadow-xl transition-shadow max-w-xs mx-auto'>";  
             echo "<h2 class='text-lg font-semibold text-gray-800 mb-2'>" . 
                  htmlspecialchars($Annonce['titre']) . "</h2>";
@@ -42,12 +33,7 @@ class AnnoncesView {
             // Corrected 'Supprimer' link and class
             echo "<a href='../Pages/Annonces.php?action=supprimer&id=" . htmlspecialchars($Annonce['id']) . "' onclick='confirmerSuppression(" . $Annonce['id'] . ")' class='inline-block bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600 transition-colors'>Supprimer</a>";
             echo "</div>";
-        }
-        
-        echo "</div>"; 
-        echo "</div>"; 
-        
-        echo "</body>";
+        } echo "</div>"; echo "</div>"; echo "</body>";
     }
 }
 ?>

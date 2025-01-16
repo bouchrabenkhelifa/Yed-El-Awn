@@ -10,6 +10,7 @@ class Gestion {
         $db = $database->getConnection();
         $MenuController = new MenuController($db);
         $MenuController->afficherAsso();
+        $MenuController->afficherMenu();
         $Sign= new SignupView();
         $Sign->afficher();
         $FooterController = new FooterController();

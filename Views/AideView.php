@@ -24,9 +24,7 @@ class AideView {
         echo "<div class='w-3/4 float-right mr-12 p-6'>";
         echo "<div class='p-4 mb-4'>";
         echo "<a href ='http://localhost/projets/YadElAwn/Controllers/GestionPartenaires.php'>";
-        echo "<button class='bg-blue-500 border-2 border-blue-500 text-white p-1 px-3 text-sm rounded-lg'>";
-        echo "<img src='../Images/Add.png' alt='Ajouter' class='inline-block mr-1 w-4 h-4'> Ajouter une demande d'aide";
-        echo "</button>";
+
         echo "</a>";
         echo "</div>";
 
@@ -37,7 +35,6 @@ class AideView {
         echo "<td class='px-4 py-2 text-left text-gray-500'>Nom du demandeur</td>";
         echo "<td class='px-4 py-2 text-left text-gray-500'>Date de la demande</td>";
         echo "<td class='px-4 py-2 text-left text-gray-500'>Type d'aide demandé</td>";
-        echo "<td class='px-4 py-2 text-left text-gray-500'>Détails de la demande</td>";
         echo "</tr>";
         echo "</thead>";
         echo "<tbody>";
@@ -47,7 +44,6 @@ class AideView {
             echo "<td class='px-4 py-2'>" . htmlspecialchars($Aide['nom_demandeur']) . "</td>";
             echo "<td class='px-4 py-2'>" . htmlspecialchars($Aide['date_demande']) . "</td>";
             echo "<td class='px-4 py-2'>" . htmlspecialchars($Aide['type_aide']) . "</td>";
-            echo "<td class='px-4 py-2 text-left text-blue-500'><a href=''>ici</a></td>";
             echo "</tr>";
         }
 

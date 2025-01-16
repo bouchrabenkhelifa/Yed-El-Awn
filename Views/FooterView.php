@@ -29,7 +29,7 @@ echo "    <div class='container  mx-auto px-4'>";
         echo "                Yad El Awn est une association caritative dédiée à apporter soutien et assistance aux personnes dans le besoin. ";
         echo "                Fondée sur des valeurs de solidarité et de générosité, l'association œuvre activement pour améliorer les ";
         echo "                conditions de vie des communautés vulnérables à travers diverses initiatives humanitaires et sociales.";
-        echo "            </p>";
+        echo "                <br> <a href='../Pages/AdminConnexion' class='font-bold underlined'> ADMINISTRATEUR </p>";
 
         echo "            <div class='mt-6 flex justify-center space-x-8'>";
         echo "                <a href='https://www.facebook.com/bou.ch.3990?mibextid=ZbWKwL'><img src='../Images/facebook.png' alt='Facebook' class='w-4 h-5 hover:opacity-75'></a>";
@@ -40,7 +40,7 @@ echo "    <div class='container  mx-auto px-4'>";
         echo "        </div>";
 
         echo "        <div class='text-center text-sm mt-6'>";
-        echo "            &copy; " . date("Y") . " Yad El Awn. Tous droits réservés.";
+            "&copy; " . date("Y") . " Yad El Awn. Tous droits réservés.";
         echo "        </div>";
 
         echo "    </div>";
